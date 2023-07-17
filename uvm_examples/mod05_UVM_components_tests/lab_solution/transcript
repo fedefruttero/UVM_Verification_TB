@@ -1,0 +1,31 @@
+# do run.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:08:24 on Jul 17,2023
+# vlog -reportprogress 300 -f compile_sv.f 
+# ** Error: counter_pkg.sv(1): Cannot open `include file "./uvm_macros.svh".
+# -- Compiling package counter_pkg
+# ** Error: counter_pkg.sv(4): (vlog-13006) Could not find the package (uvm_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: (vlog-13069) ** while parsing file included at counter_pkg.sv(10)
+# ** at counter_test.svh(2): near "uvm_test": syntax error, unexpected IDENTIFIER.
+# ** Error: ** while parsing file included at counter_pkg.sv(10)
+# ** at counter_test.svh(2): Error in class extension specification.
+# -- Compiling interface counter_if
+# ** Error: ** while parsing file included at counter_pkg.sv(10)
+# ** at counter_test.svh(6): Illegal use of 'automatic' for variable declaration (data_in).
+# ** Error: (vlog-13069) counter_pkg.sv(12): near "endpackage": syntax error, unexpected "SystemVerilog keyword 'endpackage'", expecting class.
+# -- Compiling module counter
+# ** Error: counter.sv(1): (vlog-2730) Undefined variable: 'i'.
+# ** Error: counter.sv(10): Illegal use of 'automatic' for variable declaration (i).
+# ** Error: counter.sv(1): (vlog-13294) Identifier must be declared with a port mode: i.
+# ** Error (suppressible): top.sv(1): (vlog-2744) An import statement is illegal when directly within a class scope.
+# ** Error: top.sv(1): (vlog-13006) Could not find the package (uvm_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error (suppressible): top.sv(2): (vlog-2744) An import statement is illegal when directly within a class scope.
+# -- Compiling module top
+# ** Error: top.sv(15): (vlog-2730) Undefined variable: 'ctr_if'.
+# End time: 16:08:24 on Jul 17,2023, Elapsed time: 0:00:00
+# Errors: 13, Warnings: 0
+# ** Error: /home/fede/intelFPGA/20.1/modelsim_ase/linuxaloem/vlog failed.
+# Error in macro ./run.do line 3
+# /home/fede/intelFPGA/20.1/modelsim_ase/linuxaloem/vlog failed.
+#     while executing
+# "vlog -f compile_sv.f"

@@ -1,0 +1,103 @@
+# do run.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:48 on May 27,2023
+# vlog counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 09:03:48 on May 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:48 on May 27,2023
+# vlog counter_if.sv 
+# -- Compiling interface counter_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 09:03:48 on May 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:48 on May 27,2023
+# vlog top.sv 
+# -- Compiling package top_sv_unit
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 09:03:48 on May 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" top 
+# Start time: 09:03:48 on May 27,2023
+# Loading sv_std.std
+# Loading work.top_sv_unit
+# Loading work.top
+# Loading work.counter_if
+# Loading work.counter
+# data_in: xx =>   q: xx   inc: x  ld: x
+# data_in: xx =>   q: 00   inc: x  ld: x
+# data_in: 81 =>   q: 01   inc: 0  ld: 0
+# mismatch q: 01   q_beh: 00
+# data_in: 63 =>   q: 02   inc: 1  ld: 0
+# mismatch q: 02   q_beh: 01
+# data_in: 8d =>   q: 03   inc: 1  ld: 0
+# mismatch q: 03   q_beh: 02
+# data_in: 12 =>   q: 04   inc: 1  ld: 0
+# mismatch q: 04   q_beh: 03
+# data_in: 0d =>   q: 05   inc: 1  ld: 0
+# mismatch q: 05   q_beh: 04
+# data_in: 3d =>   q: 3d   inc: 0  ld: 1
+# data_in: 8c =>   q: 3e   inc: 1  ld: 0
+# data_in: c6 =>   q: 3f   inc: 1  ld: 0
+# data_in: aa =>   q: 40   inc: 1  ld: 0
+# data_in: 77 =>   q: 41   inc: 1  ld: 0
+# data_in: 8f =>   q: 8f   inc: 0  ld: 1
+# data_in: ce =>   q: ce   inc: 0  ld: 1
+# data_in: c5 =>   q: cf   inc: 0  ld: 0
+# mismatch q: cf   q_beh: ce
+# data_in: bd =>   q: d0   inc: 0  ld: 0
+# mismatch q: d0   q_beh: ce
+# data_in: 65 =>   q: d1   inc: 1  ld: 0
+# mismatch q: d1   q_beh: cf
+# data_in: 0a =>   q: 0a   inc: 1  ld: 1
+# data_in: 20 =>   q: 0b   inc: 0  ld: 0
+# mismatch q: 0b   q_beh: 0a
+# data_in: 9d =>   q: 9d   inc: 0  ld: 1
+# data_in: 13 =>   q: 13   inc: 0  ld: 1
+# data_in: 53 =>   q: 14   inc: 1  ld: 0
+# data_in: d5 =>   q: d5   inc: 1  ld: 1
+# data_in: ae =>   q: ae   inc: 0  ld: 1
+# data_in: cf =>   q: af   inc: 1  ld: 0
+# data_in: 0a =>   q: 0a   inc: 1  ld: 1
+# data_in: 3c =>   q: 3c   inc: 0  ld: 1
+# data_in: 8a =>   q: 8a   inc: 0  ld: 1
+# data_in: d8 =>   q: 8b   inc: 1  ld: 0
+# data_in: 89 =>   q: 8c   inc: 0  ld: 0
+# mismatch q: 8c   q_beh: 8b
+# data_in: b6 =>   q: b6   inc: 1  ld: 1
+# data_in: ae =>   q: ae   inc: 0  ld: 1
+# data_in: 2a =>   q: af   inc: 0  ld: 0
+# mismatch q: af   q_beh: ae
+# data_in: 71 =>   q: 71   inc: 1  ld: 1
+# data_in: 4f =>   q: 72   inc: 1  ld: 0
+# data_in: 3a =>   q: 3a   inc: 1  ld: 1
+# data_in: 15 =>   q: 15   inc: 0  ld: 1
+# data_in: d9 =>   q: 16   inc: 1  ld: 0
+# data_in: 4c =>   q: 4c   inc: 0  ld: 1
+# data_in: 8f =>   q: 8f   inc: 1  ld: 1
+# data_in: b7 =>   q: 90   inc: 0  ld: 0
+# mismatch q: 90   q_beh: 8f
+# data_in: 5c =>   q: 5c   inc: 1  ld: 1
+# data_in: 89 =>   q: 89   inc: 1  ld: 1
+# data_in: d0 =>   q: 8a   inc: 1  ld: 0
+# data_in: 51 =>   q: 51   inc: 1  ld: 1
+# data_in: 0c =>   q: 0c   inc: 0  ld: 1
+# data_in: c8 =>   q: c8   inc: 0  ld: 1
+# data_in: 3d =>   q: 3d   inc: 1  ld: 1
+# data_in: 7e =>   q: 7e   inc: 0  ld: 1
+# data_in: 39 =>   q: 7f   inc: 1  ld: 0
+# data_in: d3 =>   q: d3   inc: 1  ld: 1
+# ** Note: $finish    : tester.svh(17)
+#    Time: 1 ns  Iteration: 1  Instance: /top
+# End time: 09:03:48 on May 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

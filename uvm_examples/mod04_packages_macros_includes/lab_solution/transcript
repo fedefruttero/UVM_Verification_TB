@@ -1,0 +1,79 @@
+# OpenFile run.do
+do run.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:06:17 on Jul 17,2023
+# vlog -reportprogress 300 -f compile_sv.f 
+# -- Compiling package counter_pkg
+# -- Compiling interface counter_if
+# -- Compiling module counter
+# -- Compiling package top_sv_unit
+# -- Importing package counter_pkg
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 16:06:17 on Jul 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" top 
+# Start time: 16:06:17 on Jul 17,2023
+# Loading sv_std.std
+# Loading work.counter_if
+# Loading work.counter_pkg
+# Loading work.top_sv_unit
+# Loading work.top
+# Loading work.counter
+# data_in: 81 =>   q: 00   inc: 0  ld: 0
+# data_in: 63 =>   q: 00   inc: 1  ld: 0
+# data_in: 8d =>   q: 01   inc: 1  ld: 0
+# data_in: 12 =>   q: 02   inc: 1  ld: 0
+# data_in: 0d =>   q: 03   inc: 1  ld: 0
+# data_in: 3d =>   q: 04   inc: 0  ld: 1
+# data_in: 8c =>   q: 3d   inc: 1  ld: 0
+# data_in: c6 =>   q: 3e   inc: 1  ld: 0
+# data_in: aa =>   q: 3f   inc: 1  ld: 0
+# data_in: 77 =>   q: 40   inc: 1  ld: 0
+# data_in: 8f =>   q: 41   inc: 0  ld: 1
+# data_in: ce =>   q: 8f   inc: 0  ld: 1
+# data_in: c5 =>   q: ce   inc: 0  ld: 0
+# data_in: bd =>   q: ce   inc: 0  ld: 0
+# data_in: 65 =>   q: ce   inc: 1  ld: 0
+# data_in: 0a =>   q: cf   inc: 1  ld: 1
+# data_in: 20 =>   q: 0a   inc: 0  ld: 0
+# data_in: 9d =>   q: 0a   inc: 0  ld: 1
+# data_in: 13 =>   q: 9d   inc: 0  ld: 1
+# data_in: 53 =>   q: 13   inc: 1  ld: 0
+# data_in: d5 =>   q: 14   inc: 1  ld: 1
+# data_in: ae =>   q: d5   inc: 0  ld: 1
+# data_in: cf =>   q: ae   inc: 1  ld: 0
+# data_in: 0a =>   q: af   inc: 1  ld: 1
+# data_in: 3c =>   q: 0a   inc: 0  ld: 1
+# data_in: 8a =>   q: 3c   inc: 0  ld: 1
+# data_in: d8 =>   q: 8a   inc: 1  ld: 0
+# data_in: 89 =>   q: 8b   inc: 0  ld: 0
+# data_in: b6 =>   q: 8b   inc: 1  ld: 1
+# data_in: ae =>   q: b6   inc: 0  ld: 1
+# data_in: 2a =>   q: ae   inc: 0  ld: 0
+# data_in: 71 =>   q: ae   inc: 1  ld: 1
+# data_in: 4f =>   q: 71   inc: 1  ld: 0
+# data_in: 3a =>   q: 72   inc: 1  ld: 1
+# data_in: 15 =>   q: 3a   inc: 0  ld: 1
+# data_in: d9 =>   q: 15   inc: 1  ld: 0
+# data_in: 4c =>   q: 16   inc: 0  ld: 1
+# data_in: 8f =>   q: 4c   inc: 1  ld: 1
+# data_in: b7 =>   q: 8f   inc: 0  ld: 0
+# data_in: 5c =>   q: 8f   inc: 1  ld: 1
+# data_in: 89 =>   q: 5c   inc: 1  ld: 1
+# data_in: d0 =>   q: 89   inc: 1  ld: 0
+# data_in: 51 =>   q: 8a   inc: 1  ld: 1
+# data_in: 0c =>   q: 51   inc: 0  ld: 1
+# data_in: c8 =>   q: 0c   inc: 0  ld: 1
+# data_in: 3d =>   q: c8   inc: 1  ld: 1
+# data_in: 7e =>   q: 3d   inc: 0  ld: 1
+# data_in: 39 =>   q: 7e   inc: 1  ld: 0
+# data_in: d3 =>   q: 7f   inc: 1  ld: 1
+# ** Note: $finish    : tester.svh(18)
+#    Time: 1 ns  Iteration: 1  Instance: /top
+# 1
+# Break in Task counter_pkg/tester::run at tester.svh line 18
+# End time: 16:06:36 on Jul 17,2023, Elapsed time: 0:00:19
+# Errors: 0, Warnings: 0
