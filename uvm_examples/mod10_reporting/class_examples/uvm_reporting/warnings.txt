@@ -1,1 +1,0 @@
-UVM_WARNING verbosity.sv(18) @ 0: uvm_test_top [MSG] This is a WARNING
