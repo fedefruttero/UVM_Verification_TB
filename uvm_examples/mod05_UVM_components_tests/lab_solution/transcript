@@ -1,31 +1,90 @@
 # do run.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:08:24 on Jul 17,2023
-# vlog -reportprogress 300 -f compile_sv.f 
-# ** Error: counter_pkg.sv(1): Cannot open `include file "./uvm_macros.svh".
+# QuestaSim-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 17:21:23 on Jul 17,2023
+# vlog -f compile_sv.f 
+# ** Note: (vlog-2286) counter_pkg.sv(1): Using implicit +incdir+/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
 # -- Compiling package counter_pkg
-# ** Error: counter_pkg.sv(4): (vlog-13006) Could not find the package (uvm_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
-# ** Error: (vlog-13069) ** while parsing file included at counter_pkg.sv(10)
-# ** at counter_test.svh(2): near "uvm_test": syntax error, unexpected IDENTIFIER.
-# ** Error: ** while parsing file included at counter_pkg.sv(10)
-# ** at counter_test.svh(2): Error in class extension specification.
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
 # -- Compiling interface counter_if
-# ** Error: ** while parsing file included at counter_pkg.sv(10)
-# ** at counter_test.svh(6): Illegal use of 'automatic' for variable declaration (data_in).
-# ** Error: (vlog-13069) counter_pkg.sv(12): near "endpackage": syntax error, unexpected "SystemVerilog keyword 'endpackage'", expecting class.
 # -- Compiling module counter
-# ** Error: counter.sv(1): (vlog-2730) Undefined variable: 'i'.
-# ** Error: counter.sv(10): Illegal use of 'automatic' for variable declaration (i).
-# ** Error: counter.sv(1): (vlog-13294) Identifier must be declared with a port mode: i.
-# ** Error (suppressible): top.sv(1): (vlog-2744) An import statement is illegal when directly within a class scope.
-# ** Error: top.sv(1): (vlog-13006) Could not find the package (uvm_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
-# ** Error (suppressible): top.sv(2): (vlog-2744) An import statement is illegal when directly within a class scope.
+# -- Compiling package top_sv_unit
+# -- Importing package counter_pkg
 # -- Compiling module top
-# ** Error: top.sv(15): (vlog-2730) Undefined variable: 'ctr_if'.
-# End time: 16:08:24 on Jul 17,2023, Elapsed time: 0:00:00
-# Errors: 13, Warnings: 0
-# ** Error: /home/fede/intelFPGA/20.1/modelsim_ase/linuxaloem/vlog failed.
-# Error in macro ./run.do line 3
-# /home/fede/intelFPGA/20.1/modelsim_ase/linuxaloem/vlog failed.
-#     while executing
-# "vlog -f compile_sv.f"
+# 
+# Top level modules:
+# 	top
+# End time: 17:21:24 on Jul 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" top "+UVM_TESTNAME=counter_test" 
+# Start time: 17:21:24 on Jul 17,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim-64
+# //  Version 2020.4 linux_x86_64 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.counter_if(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.counter_pkg(fast)
+# Loading work.top_sv_unit(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.top(fast)
+# Loading work.counter_if(fast__2)
+# Loading work.counter(fast)
+# Loading /eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test counter_test...
+# UVM_INFO counter_test.svh(33) @ 20: uvm_test_top [run] data_in: 81 q: 00  ld: 0,  inc: 0
+# UVM_INFO counter_test.svh(33) @ 40: uvm_test_top [run] data_in: 63 q: 00  ld: 0,  inc: 1
+# UVM_INFO counter_test.svh(33) @ 60: uvm_test_top [run] data_in: 8d q: 01  ld: 0,  inc: 1
+# UVM_INFO counter_test.svh(33) @ 80: uvm_test_top [run] data_in: 12 q: 02  ld: 0,  inc: 1
+# UVM_INFO counter_test.svh(33) @ 100: uvm_test_top [run] data_in: 0d q: 03  ld: 0,  inc: 1
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :    9
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [run]     5
+# ** Note: $finish    : /eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 100 ns  Iteration: 55  Instance: /top
+# End time: 17:21:32 on Jul 17,2023, Elapsed time: 0:00:08
+# Errors: 0, Warnings: 0

@@ -1,10 +1,161 @@
 m255
 K4
 z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-d/home/fede/workshop/step2/uvm_examples/uvm_examples/mod05_UVM_components_tests/lab
+Z0 d/home/2023-socv-5/step2Workshop/uvm_examples/mod05_UVM_components_tests/lab
+T_opt
+!s11d counter_pkg /home/2023-socv-5/step2Workshop/uvm_examples/mod05_UVM_components_tests/lab/work 1 counter_if 1 /home/2023-socv-5/step2Workshop/uvm_examples/mod05_UVM_components_tests/lab/work 
+!s110 1689625303
+VW7g5KBAXb9`Q5n;hKX^VP1
+04 3 4 work top fast 0
+=1-000ae431a4f1-64b5a2d5-cc967-5eac
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vcounter
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1689625301
+!i10b 1
+!s100 N6<N=RDajO6Jl`0R[a@YZ1
+Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IT^`Ad5_Hi`ljcH>A8j7<O3
+S1
+R0
+Z5 w1689607158
+8counter.sv
+Fcounter.sv
+!i122 0
+L0 1 10
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z8 !s108 1689625300.000000
+Z9 !s107 counter_test.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|/eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|top.sv|counter.sv|counter_if.sv|counter_pkg.sv|
+Z10 !s90 -f|compile_sv.f|
+!i113 0
+Z11 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 !s92 +incdir+. -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+Ycounter_if
+R2
+R3
+!i10b 1
+!s100 ]FSF@h;;F4PE@O>dhJ7`H1
+R4
+I9>B^1A<EPYlkZ3^YLV0MM0
+S1
+R0
+R5
+8counter_if.sv
+Fcounter_if.sv
+!i122 0
+Z13 L0 1 0
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+R1
+Xcounter_pkg
+!s115 counter_if
+R2
+Z14 DXx6 mtiUvm 7 uvm_pkg 0 22 lXjlbbgd2P7=0FIB1[zNj3
+R3
+!i10b 1
+!s100 IeCLEO8JLc<GA`PY?mQIl3
+R4
+I2CXbEZU5>6HgG7]OY>m9@0
+S1
+R0
+R5
+8counter_pkg.sv
+Fcounter_pkg.sv
+Fcounter_test.svh
+!i122 0
+L0 3 0
+V2CXbEZU5>6HgG7]OY>m9@0
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+R1
+vtop
+R2
+R2
+R14
+Z15 DXx4 work 11 counter_pkg 0 22 2CXbEZU5>6HgG7]OY>m9@0
+DXx4 work 11 top_sv_unit 0 22 ng?4fZg=9Z;7Aiz4RGHgg0
+R3
+R6
+r1
+!s85 0
+!i10b 1
+!s100 8n9<moS]2Rg:h`i:]EHMc1
+I1eB8hFGkMZeVd]W<[e=bd0
+!s105 top_sv_unit
+S1
+R0
+R5
+Z16 8top.sv
+Z17 Ftop.sv
+!i122 0
+L0 4 18
+R7
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+R1
+Xtop_sv_unit
+R2
+R2
+R14
+R15
+R3
+Vng?4fZg=9Z;7Aiz4RGHgg0
+r1
+!s85 0
+!i10b 1
+!s100 PD0cGk=U_LdC`cCXS8[Uj3
+Ing?4fZg=9Z;7Aiz4RGHgg0
+!i103 1
+S1
+R0
+R5
+R16
+R17
+!i122 0
+R13
+R7
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+R1
