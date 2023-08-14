@@ -1,0 +1,160 @@
+# vsim -c -do "run.do" top 
+# Start time: 20:16:16 on Aug 14,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim-64
+# //  Version 2020.4 linux_x86_64 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.p4_if(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.p4_pkg(fast)
+# Loading work.p4_top_sv_unit(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.top(fast)
+# Loading work.p4_wrap(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.p4_adder(structural)#1
+# ** Warning: (vsim-3473) Component instance "xor_gate : xor_logic" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /top/p4_wrap/DUT File: ../src/P4_ADDER.vhd
+# ** Warning: (vsim-3473) Component instance "SUM_GEN : SUMGENERATOR" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /top/p4_wrap/DUT File: ../src/P4_ADDER.vhd
+# ** Warning: (vsim-3473) Component instance "CLA : CLA_SPARSE_TREE" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /top/p4_wrap/DUT File: ../src/P4_ADDER.vhd
+# ** Warning: (vsim-8822) [TFMPC] - Missing Verilog connection for formal VHDL port 'Co'.
+#    Time: 0 ns  Iteration: 0  Instance: /top/p4_wrap/DUT File: ../tb/p4_wrap.sv Line: 4
+# Loading /eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# do run.do
+# End time: 20:16:18 on Aug 14,2023, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 4
+# vsim -voptargs=""+P4"" top "+UVM_TESTNAME=p4_test" 
+# Start time: 20:16:18 on Aug 14,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.p4_if(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.p4_pkg(fast)
+# Loading work.p4_top_sv_unit(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.top(fast)
+# Loading work.p4_wrap(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.p4_adder(structural)#1
+# ** Warning: (vsim-3473) Component instance "xor_gate : xor_logic" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /top/p4_wrap/DUT File: ../src/P4_ADDER.vhd
+# ** Warning: (vsim-3473) Component instance "SUM_GEN : SUMGENERATOR" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /top/p4_wrap/DUT File: ../src/P4_ADDER.vhd
+# ** Warning: (vsim-3473) Component instance "CLA : CLA_SPARSE_TREE" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /top/p4_wrap/DUT File: ../src/P4_ADDER.vhd
+# ** Warning: (vsim-8822) [TFMPC] - Missing Verilog connection for formal VHDL port 'Co'.
+#    Time: 0 ns  Iteration: 0  Instance: /top/p4_wrap/DUT File: ../tb/p4_wrap.sv Line: 4
+# Loading /eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test p4_test...
+# UVM_INFO ../tb/p4_test.svh(29) @ 10: uvm_test_top [run] A: c0895e81 B: 90a9a92  CIN: 0,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 30: uvm_test_top [run] A: b1f05663 B: c2426b04  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 50: uvm_test_top [run] A: 46df998d B: 35cbd86  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 70: uvm_test_top [run] A: 89375212 B: d9614232  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 90: uvm_test_top [run] A: 06d7cd0d B: 79f180  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 110: uvm_test_top [run] A: 1e8dcd3d B: 1d91f8bb  CIN: 0,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 130: uvm_test_top [run] A: 462df78c B: 3b6a2bf6  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 150: uvm_test_top [run] A: e33724c6 B: 3e7ef4fc  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 170: uvm_test_top [run] A: d513d2aa B: f17bc262  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 190: uvm_test_top [run] A: bbd27277 B: 3957fbf2  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 210: uvm_test_top [run] A: 47ecdb8f B: c4996b09  CIN: 0,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 230: uvm_test_top [run] A: e77696ce B: 3c9834f9  CIN: 0,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 250: uvm_test_top [run] A: e2ca4ec5 B: fa003d74  CIN: 0,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 270: uvm_test_top [run] A: de8e28bd B: 172c24ae  CIN: 0,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 290: uvm_test_top [run] A: b2a72665 B: cb55ac16  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 310: uvm_test_top [run] A: 0573870a B: d8f7b131  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 330: uvm_test_top [run] A: 10642120 B: e01d9140  CIN: 0,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 350: uvm_test_top [run] A: cecccc9d B: 2abc22d5  CIN: 0,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 370: uvm_test_top [run] A: 8983b813 B: e5901f4b  CIN: 0,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 390: uvm_test_top [run] A: a9a7d653 B: c35e1c06  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 410: uvm_test_top [run] A: eaa62ad5 B: 1acfeeb5  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 430: uvm_test_top [run] A: d7563eae B: c08ba501  CIN: 0,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 450: uvm_test_top [run] A: e7c572cf B: 77ff48e  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 470: uvm_test_top [run] A: 0509650a B: 8c22491  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 490: uvm_test_top [run] A: 9e314c3c B: f2b98565  CIN: 0,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 510: uvm_test_top [run] A: 452e618a B: 3cb45ef9  CIN: 0,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 530: uvm_test_top [run] A: ec4b34d8 B: 106259a0  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 550: uvm_test_top [run] A: c48a1289 B: 1e1079bc  CIN: 0,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 570: uvm_test_top [run] A: 5b0265b6 B: 3ae286f5  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 590: uvm_test_top [run] A: 571513ae B: 31a5fce3  CIN: 0,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 610: uvm_test_top [run] A: 150fdd2a B: ef3a815e  CIN: 0,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 630: uvm_test_top [run] A: b897be71 B: c2ebcd05  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 650: uvm_test_top [run] A: 27f2554f B: 217920c2  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 670: uvm_test_top [run] A: 1d06333a B: cee6301d  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 690: uvm_test_top [run] A: 0aaa4b15 B: df91993f  CIN: 0,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 710: uvm_test_top [run] A: 6c9c4bd9 B: 3c6ccdf8  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 730: uvm_test_top [run] A: 2635fb4c B: 189183b1  CIN: 0,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 750: uvm_test_top [run] A: 47b9a18f B: 27d0aacf  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 770: uvm_test_top [run] A: dbcd60b7 B: 3e36d4fc  CIN: 0,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 790: uvm_test_top [run] A: ae7d945c B: e7e22b4f  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 810: uvm_test_top [run] A: 44de3789 B: d6e5e02d  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 830: uvm_test_top [run] A: e8233ed0 B: d2571924  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 850: uvm_test_top [run] A: a8c7fc51 B: f5ff606b  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 870: uvm_test_top [run] A: 061d7f0c B: 259097cb  CIN: 0,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 890: uvm_test_top [run] A: 6457edc8 B: f0966761  CIN: 0,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 910: uvm_test_top [run] A: 1ef2ed3d B: ddc12d3b  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 930: uvm_test_top [run] A: bf05007e B: 4866d89  CIN: 0,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 950: uvm_test_top [run] A: 1cd9e739 B: 1b72c0b6  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 970: uvm_test_top [run] A: e9ebf6d3 B: 7e9478f  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO ../tb/p4_test.svh(29) @ 990: uvm_test_top [run] A: bc148878 B: 216c97c2  CIN: 1,  OUTPUT ADD/SUB: xx
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 990: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   54
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [run]    50
+# ** Note: $finish    : /eda/mentor/2020-21/RHELx86/QUESTA-CORE-PRIME_2020.4/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 990 ns  Iteration: 55  Instance: /top
+# End time: 20:16:20 on Aug 14,2023, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 4

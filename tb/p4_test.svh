@@ -24,9 +24,10 @@ class p4_test extends uvm_test;
         phase.raise_objection(this);
         repeat (nloops) begin
             @(negedge i.clk);
-            {i.A, i.B, i.CIN} = $random;
-            `uvm_info("run",$psprintf("A: %2h B: %2h  CIN: %1b,  OUTPUT ADD/SUB: %2h",
-                                                    i.A, i.B, i.CIN, i.Ssync),UVM_MEDIUM); //idk what the UVM_MEDIUM is
+            {i.Bif, i.CIN} = $random;
+            i.Aif = $random;
+            `uvm_info("run",$psprintf("A: %h B: %2h  CIN: %1b,  OUTPUT ADD/SUB: %2h",
+                                                    i.Aif, i.Bif, i.CIN, i.Scomb),UVM_MEDIUM); //UVM_MEDIUM is used to specify the verbosity level of a message or log statement
         end
         phase.drop_objection(this);
     endtask : run_phase

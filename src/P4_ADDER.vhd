@@ -57,17 +57,29 @@ architecture STRUCTURAL of P4_ADDER is
 
   signal fromCarry_to_adder : std_logic_vector(NBITS/4 downto 0);
   signal B_diff : std_logic_vector(NBITS-1 downto 0);
+  
+  signal A_sig : std_logic_vector(NBITS-1 downto 0);
+  signal B_sig : std_logic_vector(NBITS-1 downto 0);
+  signal Ci_sig : std_logic;
+  signal S_out : std_logic_vector(NBITS-1 downto 0);
+  signal Co_sig : std_logic;
 begin
+
+  S <= S_out;
+  Co <= Co_sig;
+  A_sig <= A;
+  B_sig <= B;
+  Ci_sig <= Ci;
 
   xor_gate : xor_logic
     generic map(NBITS)
-    port map(Ci, B, B_diff);
+    port map(Ci_sig, B_sig, B_diff);
 
   SUM_GEN : SUMGENERATOR
-    port map(A, B_diff, fromCarry_to_adder, S);
+    port map(A_sig, B_diff, fromCarry_to_adder, S_out);
 
   CLA : CLA_SPARSE_TREE
-    port map(A, B_diff, Ci, fromCarry_to_adder);
+    port map(A_sig, B_diff, Ci_sig, fromCarry_to_adder);
 
-  Co <= fromCarry_to_adder(NBITS/4);
+  Co_sig <= fromCarry_to_adder(NBITS/4);
 end STRUCTURAL;

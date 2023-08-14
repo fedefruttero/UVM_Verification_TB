@@ -2,8 +2,11 @@ import uvm_pkg::*;
 import p4_pkg::*;
 
 module top;
-    p4_if interfac();
-    P4_ADDER DUT(interfac.p4_port);
+
+    localparam DWIDTH = 32;
+
+    p4_if #(DWIDTH) interfac();
+    p4_wrap #(DWIDTH) p4_wrap(interfac);
 
     initial begin
         global_p4_if = interfac;
