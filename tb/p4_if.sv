@@ -9,6 +9,8 @@ logic [DWIDTH-1:0] Scomb;
 logic [DWIDTH-1:0] Ssync;
 logic              CIN;
 logic              COUT;
+integer counter = 0; // Counter for operation tries after reset
+
 
 // Interface port P4 (Device Under Test)
 modport p4_port (
@@ -35,5 +37,12 @@ end
 always #10ns begin: clk_gen
     clk = ~clk;
 end
+
+
+// // Assertions for functional correctness checks
+// `ifndef SYNTHESIS
+// `include "p4_if_sva.svh"
+// `endif /* SYNTHESIS */
+
 
 endinterface //p4_if

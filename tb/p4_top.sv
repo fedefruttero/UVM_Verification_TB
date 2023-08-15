@@ -9,7 +9,7 @@ module top;
     p4_wrap #(DWIDTH) p4_wrap(interfac);
 
     initial begin
-        global_p4_if = interfac;
+        p4_pkg::global_p4_if = interfac;
       // Number of loops we want into the configuration
         set_config_int("*","nloops",50);
     
