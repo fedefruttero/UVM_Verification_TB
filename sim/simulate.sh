@@ -5,7 +5,6 @@ set -e
 
 
 ./compilep4.sh
-vlib work
 vlog -F compile_sv.f
 vsim -c -do run.do top
 vdel --all
