@@ -1,8 +1,8 @@
 library ieee; 
 use ieee.std_logic_1164.all; 
 
-entity FA is
-	Port (	A:	In	std_logic;
+entity FA is 
+	Port (A:	In	std_logic;
 		B:	In	std_logic;
 		Ci:	In	std_logic;
 		S:	Out	std_logic;
@@ -15,7 +15,6 @@ begin
 
   S <= A xor B xor Ci;
   Co <= (A and B) or (B and Ci) or (A and Ci);
-  -- Co <= (A and B) or (B and Ci) or (A and Ci);
   
 end BEHAVIORAL;
 
