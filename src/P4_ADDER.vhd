@@ -64,9 +64,11 @@ begin
     port map(Ci, B, B_diff);
 
   SUM_GEN : SUMGENERATOR
+    generic map(NBITS)
     port map(A, B_diff, fromCarry_to_adder, S);
 
   CLA : CLA_SPARSE_TREE
+    generic map (NBITS)
     port map(A, B_diff, Ci, fromCarry_to_adder);
 
   Co <= fromCarry_to_adder(NBITS/4);

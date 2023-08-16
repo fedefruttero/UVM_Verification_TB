@@ -23,7 +23,7 @@ modport p4_port (
 
 
 // To achieve synchronization with the P4 COMBINATIONAL  
-always @(posedge clk) begin 
+always @(negedge clk) begin 
     Ssync = Scomb; 
 end
 
@@ -39,10 +39,10 @@ always #10ns begin: clk_gen
 end
 
 
-// // Assertions for functional correctness checks
-// `ifndef SYNTHESIS
-// `include "p4_if_sva.svh"
-// `endif /* SYNTHESIS */
+// Assertions for functional correctness checks
+`ifndef SYNTHESIS
+`include "p4_if_sva.svh"
+`endif /* SYNTHESIS */
 
 
 endinterface //p4_if

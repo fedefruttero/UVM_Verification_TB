@@ -3,7 +3,7 @@ class p4_test extends uvm_test;
     //this tells the factory there is a class called p4_test that has to build
     `uvm_component_utils(p4_test); //to create the object when someone types p4_test in the command line
     
-    integer nloops = 50;
+    integer nloops = 15;
     virtual interface p4_if i;
 
     //we always need this kind of constructor
@@ -24,12 +24,12 @@ class p4_test extends uvm_test;
     task run_phase(uvm_phase phase); 
         phase.raise_objection(this); //tells the UVM that we are not finished
         repeat (nloops) begin
-            @(negedge i.clk);
+            @(posedge i.clk);
             i.Bif = $random;
             i.Aif = $random;
-            i.CIN = 0;
-            `uvm_info("run",$psprintf("A: %h B: %2h  CIN: %1b,  Scomb: %2h, Ssync: %2h",
-                                                    i.Aif, i.Bif, i.CIN, i.Scomb, i.Ssync),UVM_MEDIUM); //UVM_MEDIUM is used to specify the verbosity level of a message or log statement
+            i.CIN = $random;
+           // `uvm_info("run",$psprintf("A: %h B: %h  CIN: %1b,  Scomb: %h, Ssync: %h",
+           //                                         i.Aif, i.Bif, i.CIN, i.Scomb, i.Ssync),UVM_MEDIUM); //UVM_MEDIUM is used to specify the verbosity level of a message or log statement
         end
         phase.drop_objection(this);
     endtask : run_phase

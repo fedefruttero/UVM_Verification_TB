@@ -1,0 +1,9 @@
+# vsim -c -do "run.do" top 
+# Start time: 18:41:43 on Aug 16,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: ../tb/p4_if_sva.svh(38): (vopt-2123) Missing argument for format specification '%d'.
+# ** Error: ../tb/p4_if_sva.svh(36): (vopt-2123) Missing argument for format specification '%d'.
+# Optimization failed
+# ** Error: (vopt-2064) Compiler back-end code generation process terminated with code 12.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=3, Warnings=0.
+# Error loading design
