@@ -11,7 +11,7 @@ module top;
     initial begin
         p4_pkg::global_p4_if = interfac;
       // Number of loops we want into the configuration
-        set_config_int("*","nloops",15);
+      //  set_config_int("*","nloops",1000);
     
         run_test(); //run test is defined in the uvm package that we are importing
     end

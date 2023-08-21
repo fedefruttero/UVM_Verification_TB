@@ -1,0 +1,166 @@
+# do ../sim/run.do
+# QuestaSim-64 vcom 2021.2_1 Compiler 2021.05 May 15 2021
+# Start time: 15:08:15 on Aug 21,2023
+# vcom ../src/constants.vhd 
+# -- Loading package STANDARD
+# -- Compiling package CONSTANTS
+# -- Compiling package body CONSTANTS
+# -- Loading package CONSTANTS
+# End time: 15:08:15 on Aug 21,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2021.2_1 Compiler 2021.05 May 15 2021
+# Start time: 15:08:15 on Aug 21,2023
+# vcom ../src/mux21generic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package CONSTANTS
+# -- Compiling entity MUX21_GENERIC
+# -- Compiling architecture BEHAVIORAL of MUX21_GENERIC
+# End time: 15:08:15 on Aug 21,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2021.2_1 Compiler 2021.05 May 15 2021
+# Start time: 15:08:15 on Aug 21,2023
+# vcom ../src/fa.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FA
+# -- Compiling architecture BEHAVIORAL of FA
+# -- Compiling configuration CFG_FA_BEHAVIORAL
+# -- Loading entity FA
+# -- Loading architecture BEHAVIORAL of FA
+# End time: 15:08:15 on Aug 21,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2021.2_1 Compiler 2021.05 May 15 2021
+# Start time: 15:08:15 on Aug 21,2023
+# vcom ../src/rca.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RCA
+# -- Compiling architecture STRUCTURAL of RCA
+# -- Compiling architecture BEHAVIORAL of RCA
+# -- Loading entity RCA
+# -- Compiling configuration CFG_RCA_STRUCTURAL
+# -- Loading entity RCA
+# -- Loading architecture STRUCTURAL of RCA
+# -- Loading entity FA
+# -- Loading configuration cfg_fa_behavioral
+# -- Compiling configuration CFG_RCA_BEHAVIORAL
+# -- Loading entity RCA
+# -- Loading architecture BEHAVIORAL of RCA
+# End time: 15:08:16 on Aug 21,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2021.2_1 Compiler 2021.05 May 15 2021
+# Start time: 15:08:16 on Aug 21,2023
+# vcom ../src/csb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CarrySelect
+# -- Compiling architecture STRUCTURAL of CarrySelect
+# -- Loading entity RCA
+# -- Loading package CONSTANTS
+# -- Loading entity MUX21_GENERIC
+# End time: 15:08:16 on Aug 21,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2021.2_1 Compiler 2021.05 May 15 2021
+# Start time: 15:08:16 on Aug 21,2023
+# vcom ../src/SumGenerator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SUMGENERATOR
+# -- Compiling architecture STRUCTURAL of SUMGENERATOR
+# -- Compiling configuration CFG_SUM_GENERATOR_STRUCTURAL
+# -- Loading entity SUMGENERATOR
+# -- Loading architecture STRUCTURAL of SUMGENERATOR
+# -- Loading entity CarrySelect
+# End time: 15:08:16 on Aug 21,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2021.2_1 Compiler 2021.05 May 15 2021
+# Start time: 15:08:16 on Aug 21,2023
+# vcom ../src/pg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity PG
+# -- Compiling architecture BEHAVIORAL of PG
+# End time: 15:08:16 on Aug 21,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2021.2_1 Compiler 2021.05 May 15 2021
+# Start time: 15:08:16 on Aug 21,2023
+# vcom ../src/g.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity G
+# -- Compiling architecture BEHAVIORAL of G
+# End time: 15:08:16 on Aug 21,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2021.2_1 Compiler 2021.05 May 15 2021
+# Start time: 15:08:16 on Aug 21,2023
+# vcom ../src/pg_generator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity pg_generator
+# -- Compiling architecture BEHAVIORAL of pg_generator
+# End time: 15:08:16 on Aug 21,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2021.2_1 Compiler 2021.05 May 15 2021
+# Start time: 15:08:16 on Aug 21,2023
+# vcom ../src/CLA_SPARSE_TREE.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package CONSTANTS
+# -- Compiling entity CLA_SPARSE_TREE
+# -- Compiling architecture STRUCTURAL of CLA_SPARSE_TREE
+# End time: 15:08:17 on Aug 21,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2021.2_1 Compiler 2021.05 May 15 2021
+# Start time: 15:08:17 on Aug 21,2023
+# vcom ../src/xor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity xor_logic
+# -- Compiling architecture BEHAVIORAL of xor_logic
+# End time: 15:08:17 on Aug 21,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2021.2_1 Compiler 2021.05 May 15 2021
+# Start time: 15:08:17 on Aug 21,2023
+# vcom ../src/P4_ADDER.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity P4_ADDER
+# -- Compiling architecture STRUCTURAL of P4_ADDER
+# End time: 15:08:17 on Aug 21,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Error: (vlog-7) Failed to open -f file "compile_sv.f" in read mode.
+# No such file or directory. (errno = ENOENT)
+# QuestaSim-64 vlog 2021.2_1 Compiler 2021.05 May 15 2021
+# Start time: 15:08:17 on Aug 21,2023
+# vlog -F compile_sv.f 
+# End time: 15:08:17 on Aug 21,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: /home/fede/questasim/linux_x86_64/vlog failed.
+# Error in macro ./../sim/run.do line 17
+# /home/fede/questasim/linux_x86_64/vlog failed.
+#     while executing
+# "vlog -F compile_sv.f"
