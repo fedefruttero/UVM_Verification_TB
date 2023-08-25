@@ -1,0 +1,58 @@
+# do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is fede@fede-Lenovo-V330-15IKB.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is fede@fede-Lenovo-V330-15IKB.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt2".  Locker is fede@fede-Lenovo-V330-15IKB.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt3".  Locker is fede@fede-Lenovo-V330-15IKB.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt4".  Locker is fede@fede-Lenovo-V330-15IKB.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vcom 2021.2_1 Compiler 2021.05 May 15 2021
+# Start time: 06:44:13 on Aug 25,2023
+# vcom ../src/constants.vhd 
+# -- Loading package STANDARD
+# -- Compiling package CONSTANTS
+# -- Compiling package body CONSTANTS
+# -- Loading package CONSTANTS
+# End time: 06:44:13 on Aug 25,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2021.2_1 Compiler 2021.05 May 15 2021
+# Start time: 06:44:13 on Aug 25,2023
+# vcom ../src/registerfileWindowing.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package CONSTANTS
+# -- Compiling entity REGISTER_FILE_WINDOWING
+# -- Compiling architecture BEHAVIORAL of REGISTER_FILE_WINDOWING
+# -- Compiling configuration CFG_RF_BEH
+# -- Loading package CONSTANTS
+# -- Loading entity REGISTER_FILE_WINDOWING
+# -- Loading architecture BEHAVIORAL of REGISTER_FILE_WINDOWING
+# End time: 06:44:13 on Aug 25,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2021.2_1 Compiler 2021.05 May 15 2021
+# Start time: 06:44:13 on Aug 25,2023
+# vlog -F compile_sv.f 
+# -- Compiling package generic_pkg
+# -- Compiling package rf_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# ** Note: (vlog-2286) ../tb/rf_pkg.sv(7): Using implicit +incdir+/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Importing package generic_pkg
+# ** Error (suppressible): (vlog-13276) ../tb/tester_env.svh(63): Could not find field/method name (seq_item_port) in 'drv' of 'drv.seq_item_port.connect'.
+# ** Error (suppressible): (vlog-13276) ../tb/tester_env.svh(63): Could not find field/method name (seq_item_port) in 'drv' of 'drv.seq_item_port.connect.$0'.
+# ** Error: ../tb/test_seq.svh(10): (vlog-2730) Undefined variable: 'parent'.
+# ** Error: ../tb/test_seq.svh(10): (vlog-2730) Undefined variable: 'parent'.
+# ** Error (suppressible): (vlog-13276) ../tb/test_seq.svh(26): Could not find field/method name (randomize) in 'data' of 'req.data.randomize'.
+# ** Error (suppressible): (vlog-13276) ../tb/test_seq.svh(26): Could not find field/method name (randomize) in 'data' of 'req.data.randomize.$$'.
+# ** Error: ../tb/top.sv(2): (vlog-13006) Could not find the package (rf_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ../tb/top.sv(12): (vlog-2730) Undefined variable: 'global_rf_if'.
+# End time: 06:44:13 on Aug 25,2023, Elapsed time: 0:00:00
+# Errors: 8, Warnings: 0
+# ** Error: /home/fede/questasim/linux_x86_64/vlog failed.
+# Error in macro ./run.do line 7
+# /home/fede/questasim/linux_x86_64/vlog failed.
+#     while executing
+# "vlog -F compile_sv.f "

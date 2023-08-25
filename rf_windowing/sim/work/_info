@@ -1,0 +1,267 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+!s11f MIXED_VERSIONS
+!s11e vcom 2021.2_1 2021.05, May 15 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/fede/workshop/step2/step2Workshop/rf_windowing/sim
+T_opt
+Z2 !s11d rf_pkg /home/fede/workshop/step2/step2Workshop/rf_windowing/sim/work 1 rf_if 1 /home/fede/workshop/step2/step2Workshop/rf_windowing/sim/work 
+!s110 1692895473
+V0N6F1<:>^PlO:S[5QNQ@^2
+Z3 04 3 4 work top fast 0
+=1-000ae431a4f1-64e788f1-32248-499bb
+Z4 !s124 OEM100
+Z5 o-quiet -auto_acc_if_foreign -work work +acc
+Z6 tCvgOpt 0
+n@_opt
+Z7 OL;O;2021.2_1;73
+R1
+T_opt1
+R2
+!s110 1692895682
+VUVmWOLz69KeUY3]ek>E<z2
+R3
+=1-000ae431a4f1-64e789c1-eaab3-49aaf
+R4
+R5
+R6
+n@_opt1
+R7
+R1
+T_opt2
+R2
+!s110 1692895743
+Vb>jWEdiQP6IB7X@zIzj@X0
+R3
+=1-000ae431a4f1-64e789ff-59f62-49b79
+R4
+R5
+R6
+n@_opt2
+R7
+R1
+T_opt3
+R2
+!s110 1692895854
+V@mCSd@DG@;ObX2?N0zMYJ0
+R3
+=1-000ae431a4f1-64e78a6d-67ce3-49c48
+R4
+R5
+R6
+n@_opt3
+R7
+R1
+T_opt4
+R2
+!s110 1692895887
+V48aR[4JzO^ki2e:2SWR^<3
+R3
+=1-000ae431a4f1-64e78a8e-74000-49c96
+R4
+R5
+R6
+n@_opt4
+R7
+R1
+Ccfg_rf_beh
+eREGISTER_FILE_WINDOWING
+aBEHAVIORAL
+DAx4 work 23 register_file_windowing 10 behavioral 22 ?d?TQ?dl`K?VSP9d;JOEo1
+Z8 DPx4 work 9 constants 0 22 W<zmk2LmT03kdoZS;c>Y92
+Z9 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z10 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z11 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z12 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z13 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z14 DEx4 work 23 register_file_windowing 0 22 2^ba4[@V_N^i8HDg4dlXY3
+!i122 1
+Z15 w1692693874
+R1
+Z16 8../src/registerfileWindowing.vhd
+Z17 F../src/registerfileWindowing.vhd
+l0
+L245 1
+V]VBeMIC_goeCb0mCgERoH2
+!s100 5cNFNK0VE@U^1?<ndR_Gl1
+Z18 OL;C;2021.2_1;73
+32
+Z19 !s110 1692938653
+!i10b 0
+Z20 !s108 1692938653.000000
+Z21 !s90 ../src/registerfileWindowing.vhd|
+Z22 !s107 ../src/registerfileWindowing.vhd|
+!i113 0
+Z23 tExplicit 1 CvgOpt 0
+Pconstants
+!i122 0
+Z24 w1692689857
+R1
+Z25 8../src/constants.vhd
+Z26 F../src/constants.vhd
+l0
+L1 1
+VW<zmk2LmT03kdoZS;c>Y92
+!s100 o1`^;@c9UUnTd6^58ER722
+R18
+32
+b1
+R19
+!i10b 1
+R20
+Z27 !s90 ../src/constants.vhd|
+Z28 !s107 ../src/constants.vhd|
+!i113 0
+R23
+Bbody
+R8
+!i122 0
+l0
+L5 1
+VGUV3gcCm^G]ie<2D<I8Ll0
+!s100 >=]6;<C?ITTD4GobGI=Nn3
+R18
+32
+R19
+!i10b 1
+R20
+R27
+R28
+!i113 0
+R23
+Xgeneric_pkg
+Z29 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R19
+!i10b 1
+!s100 cGg]?VNjHEY=92DE4`X;X1
+Ihb<k>?b859cZ7063WonKX2
+S1
+R1
+w1692817073
+8../tb/generic_pkg.sv
+F../tb/generic_pkg.sv
+!i122 2
+L0 1 0
+Vhb<k>?b859cZ7063WonKX2
+Z30 OL;L;2021.2_1;73
+r1
+!s85 0
+31
+R20
+!s107 ../tb/verbose_test.svh|../tb/tester_env.svh|../tb/printer.svh|../tb/monitor.svh|../tb/comparator.svh|../tb/predictor.svh|../tb/driver.svh|../tb/responder.svh|../tb/test_seq.svh|../tb/interface_base.svh|../tb/rf_req.svh|../tb/rf_data.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|../tb/top.sv|../tb/rf_wrap.sv|../tb/rf_if.sv|../tb/rf_pkg.sv|../tb/generic_pkg.sv|
+Z31 !s90 -F|compile_sv.f|
+!i113 0
+Z32 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z33 !s92 +incdir+./tb -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R6
+Eregister_file_windowing
+R15
+R8
+R9
+R10
+R11
+R12
+R13
+!i122 1
+R1
+R16
+R17
+l0
+L21 1
+V2^ba4[@V_N^i8HDg4dlXY3
+!s100 o]TWe3I6c>DbX:dijU`RN3
+R18
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 0
+R23
+Abehavioral
+R8
+R9
+R10
+R11
+R12
+R13
+R14
+!i122 1
+l83
+L52 191
+V?d?TQ?dl`K?VSP9d;JOEo1
+!s100 :JEONHb8U?D>l_I=X56^g3
+R18
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 0
+R23
+Yrf_if
+R29
+R19
+!i10b 1
+!s100 VO_IC[Cf;;=iY_Yj[3JdO3
+IYTLLh;8C8[NRi2PaaSf0m2
+Z34 !s105 rf_if_sv_unit
+S1
+R1
+w1692817119
+8../tb/rf_if.sv
+F../tb/rf_if.sv
+!i122 2
+L0 3 0
+Z35 VDg1SIo80bB@j0V0VzS_@n1
+R30
+r1
+!s85 0
+31
+R20
+Z36 !s107 ../tb/verbose_test.svh|../tb/tester_env.svh|../tb/printer.svh|../tb/monitor.svh|../tb/comparator.svh|../tb/predictor.svh|../tb/driver.svh|../tb/responder.svh|../tb/test_seq.svh|../tb/interface_base.svh|../tb/rf_req.svh|../tb/rf_data.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|../tb/top.sv|../tb/rf_wrap.sv|../tb/rf_if.sv|../tb/rf_pkg.sv|../tb/generic_pkg.sv|
+R31
+!i113 0
+R32
+R33
+R6
+vrf_wrap
+R29
+R19
+!i10b 1
+!s100 FdoMl`Z5]9M]PdKJoYz@D0
+I^LF?53@bDOOh?<SDR^MzF2
+R34
+S1
+R1
+w1692813043
+8../tb/rf_wrap.sv
+F../tb/rf_wrap.sv
+!i122 2
+L0 2 24
+R35
+R30
+r1
+!s85 0
+31
+R20
+R36
+R31
+!i113 0
+R32
+R33
+R6
