@@ -1,22 +1,15 @@
 # do run.do
-# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is fede@fede-Lenovo-V330-15IKB.
-# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is fede@fede-Lenovo-V330-15IKB.
-# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt2".  Locker is fede@fede-Lenovo-V330-15IKB.
-# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt3".  Locker is fede@fede-Lenovo-V330-15IKB.
-# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt4".  Locker is fede@fede-Lenovo-V330-15IKB.
-# ** Warning: (vlib-34) Library already exists at "work".
-# Errors: 0, Warnings: 1
 # QuestaSim-64 vcom 2021.2_1 Compiler 2021.05 May 15 2021
-# Start time: 06:44:13 on Aug 25,2023
+# Start time: 12:24:29 on Aug 25,2023
 # vcom ../src/constants.vhd 
 # -- Loading package STANDARD
 # -- Compiling package CONSTANTS
 # -- Compiling package body CONSTANTS
 # -- Loading package CONSTANTS
-# End time: 06:44:13 on Aug 25,2023, Elapsed time: 0:00:00
+# End time: 12:24:29 on Aug 25,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 2021.2_1 Compiler 2021.05 May 15 2021
-# Start time: 06:44:13 on Aug 25,2023
+# Start time: 12:24:29 on Aug 25,2023
 # vcom ../src/registerfileWindowing.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -31,28 +24,133 @@
 # -- Loading package CONSTANTS
 # -- Loading entity REGISTER_FILE_WINDOWING
 # -- Loading architecture BEHAVIORAL of REGISTER_FILE_WINDOWING
-# End time: 06:44:13 on Aug 25,2023, Elapsed time: 0:00:00
+# End time: 12:24:29 on Aug 25,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.2_1 Compiler 2021.05 May 15 2021
-# Start time: 06:44:13 on Aug 25,2023
+# Start time: 12:24:29 on Aug 25,2023
 # vlog -F compile_sv.f 
 # -- Compiling package generic_pkg
 # -- Compiling package rf_pkg
 # -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
 # ** Note: (vlog-2286) ../tb/rf_pkg.sv(7): Using implicit +incdir+/home/fede/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
 # -- Importing package generic_pkg
-# ** Error (suppressible): (vlog-13276) ../tb/tester_env.svh(63): Could not find field/method name (seq_item_port) in 'drv' of 'drv.seq_item_port.connect'.
-# ** Error (suppressible): (vlog-13276) ../tb/tester_env.svh(63): Could not find field/method name (seq_item_port) in 'drv' of 'drv.seq_item_port.connect.$0'.
-# ** Error: ../tb/test_seq.svh(10): (vlog-2730) Undefined variable: 'parent'.
-# ** Error: ../tb/test_seq.svh(10): (vlog-2730) Undefined variable: 'parent'.
-# ** Error (suppressible): (vlog-13276) ../tb/test_seq.svh(26): Could not find field/method name (randomize) in 'data' of 'req.data.randomize'.
-# ** Error (suppressible): (vlog-13276) ../tb/test_seq.svh(26): Could not find field/method name (randomize) in 'data' of 'req.data.randomize.$$'.
-# ** Error: ../tb/top.sv(2): (vlog-13006) Could not find the package (rf_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
-# ** Error: ../tb/top.sv(12): (vlog-2730) Undefined variable: 'global_rf_if'.
-# End time: 06:44:13 on Aug 25,2023, Elapsed time: 0:00:00
-# Errors: 8, Warnings: 0
-# ** Error: /home/fede/questasim/linux_x86_64/vlog failed.
-# Error in macro ./run.do line 7
-# /home/fede/questasim/linux_x86_64/vlog failed.
-#     while executing
-# "vlog -F compile_sv.f "
+# -- Compiling package rf_if_sv_unit
+# -- Compiling interface rf_if
+# -- Compiling module rf_wrap
+# -- Compiling package top_sv_unit
+# -- Importing package rf_pkg
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 12:24:29 on Aug 25,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" top "+UVM_TESTNAME=verbose_test" "+UVM_NO_RELNOTES" 
+# Start time: 12:24:29 on Aug 25,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim-64
+# //  Version 2021.2_1 linux_x86_64 May 15 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.rf_if(fast)
+# Loading work.generic_pkg(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.rf_pkg(fast)
+# Loading work.top_sv_unit(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.top(fast)
+# Loading work.rf_if_sv_unit(fast)
+# Loading work.rf_if(fast__2)
+# Loading work.rf_wrap(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.constants(body)
+# Loading work.register_file_windowing(behavioral)#1
+# Loading /home/fede/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test verbose_test...
+# UVM_INFO ../tb/test_seq.svh(16) @ 0: uvm_test_top.t_env.seqr@@tst [run] First, we set the RESET signal
+# UVM_INFO @ 21: uvm_test_top.t_env.req_prt [run] The signal reset was set, all registers are put to 0
+# UVM_INFO ../tb/test_seq.svh(23) @ 41: uvm_test_top.t_env.seqr@@tst [run] We are about to initialize the registers in the first Window
+# UVM_INFO @ 41: uvm_test_top.t_env.req_prt [run] nop Operation, no changes
+# UVM_INFO @ 61: uvm_test_top.t_env.req_prt [run] addr: 0 data (port 0): a3d310b6b5733541 op: write
+# UVM_INFO @ 81: uvm_test_top.t_env.req_prt [run] addr: 1 data (port 0): fb80d34e96898767 op: write
+# UVM_INFO @ 101: uvm_test_top.t_env.req_prt [run] addr: 2 data (port 0): 017573d2520ac34a op: write
+# UVM_INFO @ 121: uvm_test_top.t_env.req_prt [run] addr: 3 data (port 0): 9965b4b3fe9dcfb9 op: write
+# UVM_INFO @ 141: uvm_test_top.t_env.req_prt [run] addr: 4 data (port 0): a2eab39857ad645d op: write
+# UVM_INFO @ 161: uvm_test_top.t_env.req_prt [run] addr: 5 data (port 0): f974e10ad50a3af0 op: write
+# UVM_INFO @ 181: uvm_test_top.t_env.req_prt [run] addr: 6 data (port 0): 0cfac622b138fe0e op: write
+# UVM_INFO @ 201: uvm_test_top.t_env.req_prt [run] addr: 7 data (port 0): 440ed42c5a9d861b op: write
+# 
+# UVM_INFO ../tb/test_seq.svh(42) @ 202: uvm_test_top.t_env.seqr@@tst [run] Now we are going to read all the registers we wrote in the PORT0
+# UVM_INFO @ 221: uvm_test_top.t_env.req_prt [run] addr: 0 data (port 0): a3d310b6b5733541 op: read
+# UVM_INFO @ 221: uvm_test_top.t_env.cmp [run] Passed: addr: 0 data (port 0): a3d310b6b5733541
+# UVM_INFO @ 241: uvm_test_top.t_env.req_prt [run] addr: 1 data (port 0): fb80d34e96898767 op: read
+# UVM_INFO @ 241: uvm_test_top.t_env.cmp [run] Passed: addr: 1 data (port 0): fb80d34e96898767
+# UVM_INFO @ 261: uvm_test_top.t_env.req_prt [run] addr: 2 data (port 0): 017573d2520ac34a op: read
+# UVM_INFO @ 261: uvm_test_top.t_env.cmp [run] Passed: addr: 2 data (port 0): 017573d2520ac34a
+# UVM_INFO @ 281: uvm_test_top.t_env.req_prt [run] addr: 3 data (port 0): 9965b4b3fe9dcfb9 op: read
+# UVM_INFO @ 281: uvm_test_top.t_env.cmp [run] Passed: addr: 3 data (port 0): 9965b4b3fe9dcfb9
+# UVM_INFO @ 301: uvm_test_top.t_env.req_prt [run] addr: 4 data (port 0): a2eab39857ad645d op: read
+# UVM_INFO @ 301: uvm_test_top.t_env.cmp [run] Passed: addr: 4 data (port 0): a2eab39857ad645d
+# UVM_INFO @ 321: uvm_test_top.t_env.req_prt [run] addr: 5 data (port 0): f974e10ad50a3af0 op: read
+# UVM_INFO @ 321: uvm_test_top.t_env.cmp [run] Passed: addr: 5 data (port 0): f974e10ad50a3af0
+# UVM_INFO @ 341: uvm_test_top.t_env.req_prt [run] addr: 6 data (port 0): 0cfac622b138fe0e op: read
+# UVM_INFO @ 341: uvm_test_top.t_env.cmp [run] Passed: addr: 6 data (port 0): 0cfac622b138fe0e
+# UVM_INFO @ 361: uvm_test_top.t_env.req_prt [run] addr: 7 data (port 0): 440ed42c5a9d861b op: read
+# UVM_INFO @ 361: uvm_test_top.t_env.cmp [run] Passed: addr: 7 data (port 0): 440ed42c5a9d861b
+# 
+# UVM_INFO ../tb/test_seq.svh(61) @ 362: uvm_test_top.t_env.seqr@@tst [run] Now we are going to do 10 random operations
+# UVM_INFO @ 381: uvm_test_top.t_env.req_prt [run] addr: 7 data (port 1): 440ed42c5a9d861b op: read
+# UVM_INFO @ 381: uvm_test_top.t_env.cmp [run] Passed: addr: 7 data (port 1): 440ed42c5a9d861b
+# UVM_INFO @ 401: uvm_test_top.t_env.req_prt [run] addr: 7 data (port 0): 6016439e8a708d0b op: write
+# UVM_INFO @ 421: uvm_test_top.t_env.req_prt [run] addr: d data (port 0): fce5238fbb8b8015 op: write
+# UVM_INFO @ 441: uvm_test_top.t_env.req_prt [run] The signal reset was set, all registers are put to 0
+# UVM_INFO @ 461: uvm_test_top.t_env.req_prt [run] nop Operation, no changes
+# UVM_INFO @ 481: uvm_test_top.t_env.req_prt [run] addr: 5 data (port 0): 377af34ab2397b83 op: write
+# UVM_INFO @ 501: uvm_test_top.t_env.req_prt [run] addr: e data (port 0): 0000000000000000 op: read
+# UVM_INFO @ 501: uvm_test_top.t_env.cmp [run] Passed: addr: e data (port 0): 0000000000000000
+# UVM_INFO @ 521: uvm_test_top.t_env.req_prt [run] addr: 2 data (port 0): 0000000000000000 op: read
+# UVM_INFO @ 521: uvm_test_top.t_env.cmp [run] Passed: addr: 2 data (port 0): 0000000000000000
+# UVM_INFO @ 541: uvm_test_top.t_env.req_prt [run] addr: 0 data (port 1): 0000000000000000 op: read
+# UVM_INFO @ 541: uvm_test_top.t_env.cmp [run] Passed: addr: 0 data (port 1): 0000000000000000
+# UVM_INFO @ 561: uvm_test_top.t_env.req_prt [run] addr: 9 data (port 1): 0000000000000000 op: read
+# UVM_INFO @ 561: uvm_test_top.t_env.cmp [run] Passed: addr: 9 data (port 1): 0000000000000000
+# UVM_INFO @ 581: uvm_test_top.t_env.req_prt [run] addr: e data (port 1): 0000000000000000 op: read
+# UVM_INFO @ 581: uvm_test_top.t_env.cmp [run] Passed: addr: e data (port 1): 0000000000000000
+# 
+# UVM_INFO ../tb/test_seq.svh(73) @ 582: uvm_test_top.t_env.seqr@@tst [run] Now we are going to call our first subroutine and read the 8 registers
+# UVM_INFO @ 601: uvm_test_top.t_env.req_prt [run] The signal reset was set, all registers are put to 0
+# UVM_INFO @ 621: uvm_test_top.t_env.req_prt [run] nop Operation, no changes
+# ** Fatal: (SIGSEGV) Bad handle or reference.
+#    Time: 641 ns  Iteration: 0  Process: /uvm_pkg::uvm_task_phase::execute/#FORK#137(#ublk#215181159#137)_7feff1a0d87 File: /home/fede/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_common_phases.svh
+# Fatal error in NamedBeginStat rf_pkg/driver::run_phase/driver_loop at ../tb/driver.svh line 70
+# 
+# HDL call sequence:
+# Stopped at ../tb/driver.svh 70 NamedBeginStat rf_pkg/driver::run_phase/driver_loop
+# called from  /home/fede/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_common_phases.svh 245 Task uvm_pkg/uvm_run_phase::exec_task
+# called from  /home/fede/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_task_phase.svh 150 Function uvm_pkg/uvm_task_phase::execute
+# 
