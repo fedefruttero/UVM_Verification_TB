@@ -1,50 +1,56 @@
-/*
-Transactions are OBJECTS (CLASSES), we implement them by extending UVM_TRANSACTION. There are several things you do to a class to be a transaction:
+// ----------------------------------------------------------------------------
+// Title: RF Data Transaction
+// Author: Federico Fruttero
+// Affiliation: Politecnico di Torino
+// Description: This file defines a UVM transaction class for the Register File (RF) data. 
+// It includes data fields for address, data, and port. The class provides functions for 
+// string conversion, deep copying, comparison, and loading data into a transaction.
+// ----------------------------------------------------------------------------
 
-1) EXTEND UVM_TRANSACTION
-2) does not extend from uvm_component so its not a component. So it uses uvm_object_utils
-3) 
-*/
+// Import the package containing generic definitions
 import generic_pkg::*;
-class rf_data extends uvm_sequence_item;    
-    `uvm_object_utils(rf_data)  
 
-    rand logic[NBITS-1:0]     data;
-    rand logic[ADDR_SIZE-1:0] addr;
-    rand logic                port;
+// Definition of the RF Data Transaction class
+class rf_data extends uvm_sequence_item;
+    `uvm_object_utils(rf_data)
 
+    // Transaction fields
+    rand logic[NBITS-1:0]     data;  // Data value to be transferred
+    rand logic[ADDR_SIZE-1:0] addr;  // Address for the RF operation
+    rand logic                port;  // Port identifier for the RF operation
 
-    function new(string name = ""); //doesnt have a parent because its not in the hierarchy of the UVM.
+    // Constructor for initializing the transaction
+    function new(string name = "");
         super.new(name);
-     endfunction : new
-  
-     function string convert2string(); //takes the data thats in your transaction and returns it as a string.
-        return $psprintf("addr: %h data (port %d): %h",addr,port,data);
-     endfunction : convert2string
+    endfunction : new
 
-     //the do_copy MUST be implemented exactly like this. uvm_object is a general version of uvm_transaction, we use it so we can
-    //do what is called DEEP COPY. this is: we want to make sure all of the fields in our parent are getting copied but we dont want
-    //to know whats happening in the parent class to make the copy happen, so we receive an argument as an uvm_object (we want it to be a mem_data obj)
-    
-   function void do_copy(uvm_object rhs); 
-    rf_data RHS;
-    super.do_copy(rhs); 
-    $cast(RHS,rhs); //we do this cast so we can access ADDR and DATA
-    data     = RHS.data;
-    addr     = RHS.addr;
-    port     = RHS.port;
+    // Convert transaction to a human-readable string
+    function string convert2string();
+        return $sformatf("addr: %h data (port %d): %h", addr, port, data);
+    endfunction : convert2string
+
+    // Deep copy implementation for creating a copy of the transaction
+    function void do_copy(uvm_object rhs);
+        rf_data RHS;
+        super.do_copy(rhs);  // Call the base class copy function
+        $cast(RHS, rhs);     // Cast the incoming object to rf_data
+        data = RHS.data;     // Copy the data field
+        addr = RHS.addr;     // Copy the address field
+        port = RHS.port;     // Copy the port field
     endfunction : do_copy
 
-    function bit comp (uvm_object rhs);
+    // Compare transactions for equality
+    function bit comp(uvm_object rhs);
         rf_data RHS;
-        $cast (RHS,rhs);
-        return ((RHS.addr == addr) && (RHS.data == data) && (RHS.port == port));
-     endfunction : comp
+        $cast(RHS, rhs);  // Cast the incoming object to rf_data
+        return (RHS.addr == addr) && (RHS.data == data) && (RHS.port == port);
+    endfunction : comp
 
-     function void load_data (logic[ADDR_SIZE-1:0] a, logic[NBITS-1:0] d, logic p); //TO LOAD DATA INTO A TRANSACTION
-        addr = a;     
-        data = d;
-        port = p;
-     endfunction : load_data
-     
+    // Load data into a transaction for simulation
+    function void load_data(logic[ADDR_SIZE-1:0] a, logic[NBITS-1:0] d, logic p);
+        addr = a;  // Set the address field
+        data = d;  // Set the data field
+        port = p;  // Set the port field
+    endfunction : load_data
+
 endclass : rf_data

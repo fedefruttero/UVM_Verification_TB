@@ -94,9 +94,16 @@ begin
 
       if RESET = '1' then
 
-        REGISTERS <= (others => (others => '0'));
-        OUT1      <= (others => '0');
-        OUT2      <= (others => '0');
+        REGISTERS   <= (others => (others => '0'));
+        OUT1        <= (others => '0');
+        OUT2        <= (others => '0');
+        --THIS LINES WERE MISSING, I ADDED THEM AND NOW WE SHOULD BE FINE:
+        i           <= 0;
+        j           <= 0;
+        SWP         <= 10000;
+        CWP         <= 0;
+        CANSAVE     <= true;
+        CANRESTORE  <= true;
       
 -- CALL STATE
       ---- Update the CWP
@@ -180,7 +187,7 @@ begin
           FILLING <= '0';
 
           if SWP = 0 then
-            SWP <= 100000;
+            SWP <= 10000;
           else
             SWP <= SWP - (2*N);
           end if;

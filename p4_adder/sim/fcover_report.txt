@@ -1,0 +1,150 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /p4_pkg
+=== Design Unit: work.p4_pkg
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      1        na        na    94.44%
+        Coverpoints/Crosses          4        na        na        na
+            Covergroup Bins         26        22         4    84.61%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /p4_pkg/p4_cov/p4_cg                             94.44%        100          -    Uncovered            
+    covered/total bins:                                    22         26          -                      
+    missing/total bins:                                     4         26          -                      
+    % Hit:                                             84.61%        100          -                      
+    Coverpoint a_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_000000000                                 40          1          -    Covered              
+        bin cornerup_FFFFFFFF_7FFFFFFF                  10123          1          -    Covered              
+        bin cornerlow_0000003F_00000000                  2470          1          -    Covered              
+        default bin others                               9877                     -    Occurred             
+    Coverpoint b_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_00000000                                  42          1          -    Covered              
+        bin cornerup_FFFFFFFF_7FFFFFFF                  10020          1          -    Covered              
+        bin cornerlow_0000003F_00000000                  2465          1          -    Covered              
+        default bin others                               9980                     -    Occurred             
+    Coverpoint cin_cp                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin values[0]                                    9963          1          -    Covered              
+        bin values[1]                                   10036          1          -    Covered              
+    Cross crossed_A_B_Cin                              77.77%        100          -    Uncovered            
+        covered/total bins:                                14         18          -                      
+        missing/total bins:                                 4         18          -                      
+        % Hit:                                         77.77%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <cornerlow_0000003F_00000000,cornerlow_0000003F_00000000,values[1]> 
+                                                          151          1          -    Covered              
+            bin <cornerlow_0000003F_00000000,cornerlow_0000003F_00000000,values[0]> 
+                                                          149          1          -    Covered              
+            bin <cornerup_FFFFFFFF_7FFFFFFF,cornerlow_0000003F_00000000,values[1]> 
+                                                          592          1          -    Covered              
+            bin <cornerup_FFFFFFFF_7FFFFFFF,cornerlow_0000003F_00000000,values[0]> 
+                                                          604          1          -    Covered              
+            bin <cornerlow_0000003F_00000000,cornerup_FFFFFFFF_7FFFFFFF,values[1]> 
+                                                          642          1          -    Covered              
+            bin <cornerlow_0000003F_00000000,cornerup_FFFFFFFF_7FFFFFFF,values[0]> 
+                                                          630          1          -    Covered              
+            bin <cornerup_FFFFFFFF_7FFFFFFF,cornerup_FFFFFFFF_7FFFFFFF,values[1]> 
+                                                         2562          1          -    Covered              
+            bin <cornerup_FFFFFFFF_7FFFFFFF,cornerup_FFFFFFFF_7FFFFFFF,values[0]> 
+                                                         2547          1          -    Covered              
+            bin <zero_000000000,cornerup_FFFFFFFF_7FFFFFFF,values[1]> 
+                                                           11          1          -    Covered              
+            bin <zero_000000000,cornerup_FFFFFFFF_7FFFFFFF,values[0]> 
+                                                            4          1          -    Covered              
+            bin <cornerlow_0000003F_00000000,zero_00000000,values[1]> 
+                                                            3          1          -    Covered              
+            bin <cornerlow_0000003F_00000000,zero_00000000,values[0]> 
+                                                            3          1          -    Covered              
+            bin <cornerup_FFFFFFFF_7FFFFFFF,zero_00000000,values[1]> 
+                                                           10          1          -    Covered              
+            bin <cornerup_FFFFFFFF_7FFFFFFF,zero_00000000,values[0]> 
+                                                            9          1          -    Covered              
+            bin <zero_000000000,cornerlow_0000003F_00000000,*> 
+                                                            0          1          2    ZERO                 
+            bin <zero_000000000,zero_00000000,*>            0          1          2    ZERO                 
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /p4_pkg/p4_cov/p4_cg                             94.44%        100          -    Uncovered            
+    covered/total bins:                                    22         26          -                      
+    missing/total bins:                                     4         26          -                      
+    % Hit:                                             84.61%        100          -                      
+    Coverpoint a_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_000000000                                 40          1          -    Covered              
+        bin cornerup_FFFFFFFF_7FFFFFFF                  10123          1          -    Covered              
+        bin cornerlow_0000003F_00000000                  2470          1          -    Covered              
+        default bin others                               9877                     -    Occurred             
+    Coverpoint b_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_00000000                                  42          1          -    Covered              
+        bin cornerup_FFFFFFFF_7FFFFFFF                  10020          1          -    Covered              
+        bin cornerlow_0000003F_00000000                  2465          1          -    Covered              
+        default bin others                               9980                     -    Occurred             
+    Coverpoint cin_cp                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin values[0]                                    9963          1          -    Covered              
+        bin values[1]                                   10036          1          -    Covered              
+    Cross crossed_A_B_Cin                              77.77%        100          -    Uncovered            
+        covered/total bins:                                14         18          -                      
+        missing/total bins:                                 4         18          -                      
+        % Hit:                                         77.77%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <cornerlow_0000003F_00000000,cornerlow_0000003F_00000000,values[1]> 
+                                                          151          1          -    Covered              
+            bin <cornerlow_0000003F_00000000,cornerlow_0000003F_00000000,values[0]> 
+                                                          149          1          -    Covered              
+            bin <cornerup_FFFFFFFF_7FFFFFFF,cornerlow_0000003F_00000000,values[1]> 
+                                                          592          1          -    Covered              
+            bin <cornerup_FFFFFFFF_7FFFFFFF,cornerlow_0000003F_00000000,values[0]> 
+                                                          604          1          -    Covered              
+            bin <cornerlow_0000003F_00000000,cornerup_FFFFFFFF_7FFFFFFF,values[1]> 
+                                                          642          1          -    Covered              
+            bin <cornerlow_0000003F_00000000,cornerup_FFFFFFFF_7FFFFFFF,values[0]> 
+                                                          630          1          -    Covered              
+            bin <cornerup_FFFFFFFF_7FFFFFFF,cornerup_FFFFFFFF_7FFFFFFF,values[1]> 
+                                                         2562          1          -    Covered              
+            bin <cornerup_FFFFFFFF_7FFFFFFF,cornerup_FFFFFFFF_7FFFFFFF,values[0]> 
+                                                         2547          1          -    Covered              
+            bin <zero_000000000,cornerup_FFFFFFFF_7FFFFFFF,values[1]> 
+                                                           11          1          -    Covered              
+            bin <zero_000000000,cornerup_FFFFFFFF_7FFFFFFF,values[0]> 
+                                                            4          1          -    Covered              
+            bin <cornerlow_0000003F_00000000,zero_00000000,values[1]> 
+                                                            3          1          -    Covered              
+            bin <cornerlow_0000003F_00000000,zero_00000000,values[0]> 
+                                                            3          1          -    Covered              
+            bin <cornerup_FFFFFFFF_7FFFFFFF,zero_00000000,values[1]> 
+                                                           10          1          -    Covered              
+            bin <cornerup_FFFFFFFF_7FFFFFFF,zero_00000000,values[0]> 
+                                                            9          1          -    Covered              
+            bin <zero_000000000,cornerlow_0000003F_00000000,*> 
+                                                            0          1          2    ZERO                 
+            bin <zero_000000000,zero_00000000,*>            0          1          2    ZERO                 
+
+TOTAL COVERGROUP COVERAGE: 94.44%  COVERGROUP TYPES: 1
+
+Total Coverage By Instance (filtered view): 94.44%
+

@@ -1,28 +1,42 @@
+// ----------------------------------------------------------------------------
+// Title: RF Package
+// Author: Federico Fruttero
+// Affiliation: Politecnico di Torino
+// Description: This package includes all the necessary components, transactions,
+//              and configurations to build and run the RF testbench.
+// ----------------------------------------------------------------------------
+
 package rf_pkg;
-    import uvm_pkg::*;
-    typedef enum {read, write, reset, call, ret,nop} rf_op;
-    //create a global virtual variable to hold the P4_if interface
+    import uvm_pkg::*; // Import the UVM package
+
+    // Define the enumeration for RF operations
+    typedef enum {read, write, reset, call, ret, nop} rf_op;
+
+    // Create a global virtual interface for the RF interface
     virtual interface rf_if global_rf_if;
 
+    bit verbose; // Global verbosity level for printing information
+
+    // Include files for transactions and sequences
     `include "uvm_macros.svh"
-   // uvm_transactions
-    `include "rf_data.svh"
-    `include "rf_req.svh"
-    `include "test_seq.svh"
+    `include "rf_data.svh" // Response transaction
+    `include "rf_req.svh" // Request transaction
+    `include "test_seq.svh" // Test sequence
 
-   // uvm_agents 
-    `include "interface_base.svh"
-    `include "responder.svh"
-    `include "driver.svh"
-    `include "predictor.svh"
-    `include "comparator.svh"
-    `include "monitor.svh"
-    `include "printer.svh"
-    
+    // Include files for agents
+    `include "interface_base.svh" // Base interface
+    `include "responder.svh" // Responder agent
+    `include "driver.svh" // Driver agent
+    `include "predictor.svh" // Predictor agent
+    `include "comparator.svh" // Comparator agent
+    `include "monitor.svh" // Monitor agent
+    `include "printer.svh" // Printer agent
+    `include "coverage.svh" // Coverage agent
 
-    //env
-    `include "tester_env.svh"
+    // Include file for the test environment
+    `include "tester_env.svh" // Test environment
 
-    //tests:
-    `include "verbose_test.svh"
-endpackage : rf_pkg//rf_pkg
+    // Include files for tests
+    `include "verbose_test.svh" // Verbose test
+
+endpackage : rf_pkg // End of package rf_pkg

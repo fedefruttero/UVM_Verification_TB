@@ -1,0 +1,124 @@
+# Current time Tue Aug 22 09:23:16 2023
+# Program = vsim
+# Id = "2021.2_1"
+# Version = "2021.05"
+# Date = "May 15 2021"
+# Platform = "linux_x86_64"
+# Signature = dfcd0de65e8129bcb66fdbdef15ad702
+# 0    0x0000000000a6748d: '<unknown (@0xa6748d)>'
+# 1    0x00000000038178a3: '<unknown (@0x38178a3)>'
+# 2    0x0000000000a6acef: '<unknown (@0xa6acef)>'
+# 3    0x00000000006e2ce8: '<unknown (@0x6e2ce8)>'
+# 4    0x0000000000a5e48c: '<unknown (@0xa5e48c)>'
+# 5    0x0000000000a5e7a5: '<unknown (@0xa5e7a5)>'
+# 6    0x00007ffff7845495: '<unknown (@0x7ffff7845495)>'
+# --> START OF USERCODE
+# 7    0x00007ffff7845610: 'on_exit + 0x0000000000000000' in '/lib/x86_64-linux-gnu/libc.so.6'
+# <-- END OF USERCODE
+# 8    0x0000000000a627c5: '<unknown (@0xa627c5)>'
+# 9    0x00007ffff7842520: '<unknown (@0x7ffff7842520)>'
+# 10   0x00000000038897a4: '<unknown (@0x38897a4)>'
+# 11   0x0000000003889f63: '<unknown (@0x3889f63)>'
+# 12   0x0000000000a6a93f: '<unknown (@0xa6a93f)>'
+# 13   0x0000000000a6aaa0: '<unknown (@0xa6aaa0)>'
+# 14   0x000000000381779f: '<unknown (@0x381779f)>'
+# 15   0x0000000000a6ad00: '<unknown (@0xa6ad00)>'
+# 16   0x0000000000a5b19c: '<unknown (@0xa5b19c)>'
+# 17   0x0000000003818aa4: '<unknown (@0x3818aa4)>'
+# 18   0x0000000000a62bef: '<unknown (@0xa62bef)>'
+# End of Stack Trace
+
+
+# Current time Tue Aug 22 09:23:16 2023
+# Program = vsim
+# Id = "2021.2_1"
+# Version = "2021.05"
+# Date = "May 15 2021"
+# Platform = "linux_x86_64"
+# Signature = dfcd0de65e8129bcb66fdbdef15ad702
+# 0    0x0000000000a6748d: '<unknown (@0xa6748d)>'
+# 1    0x00000000038178a3: '<unknown (@0x38178a3)>'
+# 2    0x0000000000a6acef: '<unknown (@0xa6acef)>'
+# 3    0x00000000006e2ce8: '<unknown (@0x6e2ce8)>'
+# 4    0x0000000000a5e48c: '<unknown (@0xa5e48c)>'
+# 5    0x0000000000a5e7a5: '<unknown (@0xa5e7a5)>'
+# 6    0x00007ffff7845495: '<unknown (@0x7ffff7845495)>'
+# --> START OF USERCODE
+# 7    0x00007ffff7845610: 'on_exit + 0x0000000000000000' in '/lib/x86_64-linux-gnu/libc.so.6'
+# <-- END OF USERCODE
+# 8    0x0000000000a627c5: '<unknown (@0xa627c5)>'
+# 9    0x00007ffff7842520: '<unknown (@0x7ffff7842520)>'
+# 10   0x00000000038897a4: '<unknown (@0x38897a4)>'
+# 11   0x0000000003889f63: '<unknown (@0x3889f63)>'
+# 12   0x0000000000a6a93f: '<unknown (@0xa6a93f)>'
+# 13   0x0000000000a6aaa0: '<unknown (@0xa6aaa0)>'
+# 14   0x000000000381779f: '<unknown (@0x381779f)>'
+# 15   0x0000000000a6ad00: '<unknown (@0xa6ad00)>'
+# 16   0x0000000000a5b19c: '<unknown (@0xa5b19c)>'
+# 17   0x0000000003818aa4: '<unknown (@0x3818aa4)>'
+# 18   0x0000000000a62bef: '<unknown (@0xa62bef)>'
+# End of Stack Trace
+
+
+# Current time Tue Aug 22 09:23:16 2023
+# Program = vsim
+# Id = "2021.2_1"
+# Version = "2021.05"
+# Date = "May 15 2021"
+# Platform = "linux_x86_64"
+# Signature = dfcd0de65e8129bcb66fdbdef15ad702
+# 0    0x0000000000a6748d: '<unknown (@0xa6748d)>'
+# 1    0x00000000038178a3: '<unknown (@0x38178a3)>'
+# 2    0x0000000000a6acef: '<unknown (@0xa6acef)>'
+# 3    0x00000000006e2ce8: '<unknown (@0x6e2ce8)>'
+# 4    0x0000000000a5e48c: '<unknown (@0xa5e48c)>'
+# 5    0x0000000000a5e7a5: '<unknown (@0xa5e7a5)>'
+# 6    0x00007ffff7845495: '<unknown (@0x7ffff7845495)>'
+# --> START OF USERCODE
+# 7    0x00007ffff7845610: 'on_exit + 0x0000000000000000' in '/lib/x86_64-linux-gnu/libc.so.6'
+# <-- END OF USERCODE
+# 8    0x0000000000a627c5: '<unknown (@0xa627c5)>'
+# 9    0x00007ffff7842520: '<unknown (@0x7ffff7842520)>'
+# 10   0x00000000038897a4: '<unknown (@0x38897a4)>'
+# 11   0x0000000003889f63: '<unknown (@0x3889f63)>'
+# 12   0x0000000000a6a93f: '<unknown (@0xa6a93f)>'
+# 13   0x0000000000a6aaa0: '<unknown (@0xa6aaa0)>'
+# 14   0x000000000381779f: '<unknown (@0x381779f)>'
+# 15   0x0000000000a6ad00: '<unknown (@0xa6ad00)>'
+# 16   0x0000000000a5b19c: '<unknown (@0xa5b19c)>'
+# 17   0x0000000003818aa4: '<unknown (@0x3818aa4)>'
+# 18   0x0000000000a62bef: '<unknown (@0xa62bef)>'
+# End of Stack Trace
+
+
+# Current time Tue Aug 22 09:23:16 2023
+# Program = vsim
+# Id = "2021.2_1"
+# Version = "2021.05"
+# Date = "May 15 2021"
+# Platform = "linux_x86_64"
+# Signature = dfcd0de65e8129bcb66fdbdef15ad702
+# 0    0x0000000000a6748d: '<unknown (@0xa6748d)>'
+# 1    0x00000000038178a3: '<unknown (@0x38178a3)>'
+# 2    0x0000000000a6acef: '<unknown (@0xa6acef)>'
+# 3    0x00000000006e2ce8: '<unknown (@0x6e2ce8)>'
+# 4    0x0000000000a5e48c: '<unknown (@0xa5e48c)>'
+# 5    0x0000000000a5e7a5: '<unknown (@0xa5e7a5)>'
+# 6    0x00007ffff7845495: '<unknown (@0x7ffff7845495)>'
+# --> START OF USERCODE
+# 7    0x00007ffff7845610: 'on_exit + 0x0000000000000000' in '/lib/x86_64-linux-gnu/libc.so.6'
+# <-- END OF USERCODE
+# 8    0x0000000000a627c5: '<unknown (@0xa627c5)>'
+# 9    0x00007ffff7842520: '<unknown (@0x7ffff7842520)>'
+# 10   0x00000000038897a4: '<unknown (@0x38897a4)>'
+# 11   0x0000000003889f63: '<unknown (@0x3889f63)>'
+# 12   0x0000000000a6a93f: '<unknown (@0xa6a93f)>'
+# 13   0x0000000000a6aaa0: '<unknown (@0xa6aaa0)>'
+# 14   0x000000000381779f: '<unknown (@0x381779f)>'
+# 15   0x0000000000a6ad00: '<unknown (@0xa6ad00)>'
+# 16   0x0000000000a5b19c: '<unknown (@0xa5b19c)>'
+# 17   0x0000000003818aa4: '<unknown (@0x3818aa4)>'
+# 18   0x0000000000a62bef: '<unknown (@0xa62bef)>'
+# End of Stack Trace
+
+
