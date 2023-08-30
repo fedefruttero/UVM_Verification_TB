@@ -98,9 +98,6 @@ class test_seq extends uvm_sequence #(rf_req, rf_data); // Sequence parameterize
        call_return_reset(reset);
        random_operations(10000);
 
-       call_return_reset(reset);
-       call_return_reset(call); //here   
-       call_return_reset(call);
    endtask : body
 
    // Task to perform a given number of random operations without verbosity
@@ -116,11 +113,11 @@ class test_seq extends uvm_sequence #(rf_req, rf_data); // Sequence parameterize
                // Distribution for the 'op' field
                data inside {[64'h0: 64'hFFFFFFFFFFFFFFFF]}; // Range for 64-bit number
                op dist {
-                   read  := 27,
-                   write := 27,
-                   call  := 20,
-                   ret   := 20,
-                   reset := 6
+                   read  := 38,
+                   write := 38,
+                   call  := 10,
+                   ret   := 10,
+                   reset := 4
                };
            });
            // Start and finish the transaction
@@ -142,9 +139,11 @@ class test_seq extends uvm_sequence #(rf_req, rf_data); // Sequence parameterize
        $display("");
        // Create the request object for the specified operation
        req = new();
+       assert(req.randomize());
        req.op = operation;
        // Start and finish the transaction
        start_item(req);
+       `uvm_info("test_seq", {"Sending transaction ", req.convert2string()}, UVM_HIGH);
        finish_item(req);
        // Get the response        
        get_response(rsp);

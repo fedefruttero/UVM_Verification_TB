@@ -24,16 +24,24 @@ class coverage extends uvm_agent;
         }
     endgroup
 
+    covergroup triple_transition_cg;
+        coverpoint operation_cp1 {
+            bins op_transition[] = ([read:ret] => [read:ret] => [read:ret]);
+        }
+    endgroup
+
     // Declare a covergroup for comprehensive coverage
     covergroup comprehensive_rf_coverage;
-        coverpoint operation_cp2;
+        coverpoint operation_cp2 {
+            bins operations = {read,write,ret,reset,call};
+        }
         coverpoint address_cp{
             bins range_0_to_13 = {[0:13]};
         }
         coverpoint port_cp;
         coverpoint data_cp{
             bins cornerup   = {[(1<<NBITS)-1 : (1<<NBITS-1)-1]};
-            bins cornerlow  = {[0 : (1<<NBITS-26)-1]};
+            bins cornerlow  = {[0 : (1<<NBITS-62)-1]};
             bins others     = default;
         }
     endgroup
@@ -42,19 +50,23 @@ class coverage extends uvm_agent;
         super.new(name, parent);
         comprehensive_rf_coverage = new();
         operation_transition_cg = new();
+        triple_transition_cg = new();
     endfunction : new
     
     task run_phase(uvm_phase phase);
         rf_req req; // Request transaction
         forever begin : forever_loop
            req_fifo.get(req); // Get a request from the FIFO
-           operation_cp1 = req.op; // Update coverage points
-           operation_cp2 = req.op; // Update coverage points
-           address_cp = req.addr;
-           port_cp = req.port;
-           data_cp = req.data;
-           operation_transition_cg.sample(); // Sample the operation transition covergroup
-           comprehensive_rf_coverage.sample(); // Sample the comprehensive covergroup
+           if(req.op != nop) begin 
+                operation_cp1 = req.op; // Update coverage points
+                operation_cp2 = req.op; // Update coverage points
+                address_cp = req.addr;
+                port_cp = req.port;
+                data_cp = req.data;
+                operation_transition_cg.sample(); // Sample the operation transition covergroup
+                comprehensive_rf_coverage.sample(); // Sample the comprehensive covergroup
+                triple_transition_cg.sample();
+           end
         end : forever_loop
     endtask // run
   
