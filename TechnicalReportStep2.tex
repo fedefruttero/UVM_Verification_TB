@@ -1,0 +1,559 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts,amsfonts,latexsym,cancel}
+\usepackage{makeidx}
+\usepackage{subfigure} 
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{float}	%Ayuda a ubicar en una posicion deseada la imagen
+
+% Custom title configuration
+\pretitle{\begin{center}\Huge\bfseries}
+\posttitle{\par\end{center}\vskip 0.5em}
+\preauthor{\begin{center}\Large\lineskip 0.5em\begin{tabular}[t]{c}}
+\postauthor{\end{tabular}\par\end{center}}
+
+\title{Technical Report Preparatory Workshop STEP II\\ \textbf{``SoC Verification \& Strategies''}}
+\author{Federico Fruttero}
+\date{\today}
+\def\university{Politecnico di Torino}
+
+\begin{document}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.3\textwidth]{img/Politologo.png}\par\vspace{1cm} 
+    \vspace{1cm}
+    {\scshape\LARGE \university\par}
+    \vspace{3cm}
+    \begin{minipage}{0.6\textwidth}
+        \centering
+        {\Huge \thetitle \par} % workshop title
+        \vspace{1.5cm}
+        {\Large \theauthor\par} % your name
+    \end{minipage}
+    \vfill
+    % Bottom of the page
+    {\large \thedate\par}
+    \includegraphics{img/morelogos.jpg}\par\vspace{1cm} 
+\end{titlepage}
+
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+\setcounter{page}{1}
+
+
+
+\chapter{P4 Adder}
+\section{Introduction}
+In the quest to ensure the reliability and functionality of complex hardware designs, robust verification methodologies are crucial. The Universal Verification Methodology (UVM) has emerged as a standard framework that empowers engineers to construct efficient and organized testbenches. This section goes into the UVM testbench designed for the Pentium 4 adder module.
+
+Highlighting the advantages of UVM over traditional SystemVerilog-only approaches, this section shows on how UVM's components and structured interactions contribute to a streamlined verification environment. We'll explore how UVM components, the factory mechanism, and interactions elevate the Pentium 4 adder verification process.
+
+Subsequent sections will go deeper into more complex technical aspects of the UVM for a Register File with Windowing.
+
+\section{Summary of the testbench components}
+This summary provides an overview of the key files that constitute the Pentium 4 testbench setup, ullustrating the utilization of UVM methodologies to streamline the verification process.
+
+\vspace*{0.3cm}
+
+\textbf{p4\_if.sv} - This file defines the UVM interface for the Pentium 4 adder module. It encapsulates the signals involved in the communication between the testbench and the VHDL design, providing a clear abstraction for stimulus generation and response analysis.
+
+\vspace*{0.3cm}
+
+\textbf{driver.svh }- The driver class, an integral component of the UVM testbench, generates transactions and drives them into the design. It interfaces with the UVM environment and the DUT, ensuring efficient and synchronized communication.
+
+\vspace*{0.3cm}
+
+\textbf{scoreboard.svh} - The scoreboard class verifies the correctness of the DUT's outputs by comparing them with expected results. It plays a pivotal role in ensuring the accuracy of the verification process.
+
+\vspace*{0.3cm}
+
+\textbf{printer.svh} - The printer class generates informative messages during simulation, aiding in debugging and understanding the simulation progress. This component is especially useful for verbose tests.
+
+\vspace*{0.3cm}
+
+\textbf{p4\_cov.svh} - This file implements functional coverage collection for the P4 adder module. It defines coverpoints and crosses to track the exercised scenarios during simulation.
+
+\vspace*{0.3cm}
+
+\textbf{tester\_env.svh} - The tester environment encapsulates the UVM components, creating an organized and structured testbench architecture. It promotes modularization and easy integration of various verification components.
+
+\vspace*{0.3cm}
+
+\textbf{verbose\_test.svh} - This class represents a UVM test using a verbose approach, where detailed logs and information about the simulation are generated. It showcases the power of UVM in providing comprehensive insights during testing.
+
+\vspace*{0.3cm}
+
+\textbf{quiet\_test.svh} - The quiet test class demonstrates a UVM test with minimal logs, suitable for efficiency-focused simulations. It illustrates the versatility of UVM in adapting to different simulation needs.
+
+\vspace*{0.3cm}
+
+\textbf{p4\_pkg.sv} - The package file includes import statements, global variables, and component inclusion macros. It provides a centralized place for defining and managing resources 
+shared across the testbench.
+
+\vspace*{0.3cm}
+
+\textbf{top.sv} - The top module instantiates the Pentium 4 interface, wraps the design, and orchestrates the test execution. It highlights the modularization and configurability of the verification environment.
+
+\vspace*{0.3cm}
+
+\textbf{run.do} - The simulation script for \textbf{QuestaSim} compiles and runs the testbench, showcasing the integration of the testbench components and the execution of UVM-based tests.
+
+\vspace*{0.3cm}
+
+This collection of files forms a comprehensive UVM-based testbench setup for the Pentium 4 adder module. It employs UVM methodologies to automate various verification tasks, from generating stimuli to analyzing coverage. Through this systematic approach, the verification process becomes structured, efficient, and adaptable to different testing scenarios.
+
+\section{P4 TEST}
+In the case of the P4, different from the register file, the testing is performed in the run\_phase in the DRIVER:
+\vspace{0.3cm}
+\begin{lstlisting}[language=Verilog, caption= run\_phase inside driver.svh, label=lst:sysverilog]
+// Run Phase: Generate stimulus for the DUT
+    task run_phase(uvm_phase phase);
+        int nloops = 20000; // Number of iterations
+
+        phase.raise_objection(this); // Indicate that the agent is not finished yet
+
+        repeat (nloops) begin
+            @(posedge i.clk); // Wait for the rising edge of the clock
+
+            i.CIN = $random; // Assign random value to carry input
+
+            // Generate random values for Aif
+            if ($urandom_range(0, 9) < 5) // Higher probability for values closer to 0
+                i.Aif = $urandom_range(32'h00000000, 32'h000000ff);
+            else
+                i.Aif = $urandom_range(32'h7FFFFFFF, 32'hffffffff);
+
+            // Generate random values for Bif
+            if ($urandom_range(0, 9) < 5) // Higher probability for values closer to 0
+                i.Bif = $urandom_range(32'h00000000, 32'h000000ff);
+            else
+                i.Bif = $urandom_range(32'h7FFFFFFF, 32'hffffffff);
+        end
+
+        phase.drop_objection(this); // Indicate that the agent has finished
+    endtask : run_phase
+\end{lstlisting}
+\vspace{0.3cm}
+We can see how the testing is simply a repeat loop for which number of iterations
+is defined here as 20000. Inside the loop make use of the randomize() to obtain randomly generated values for the inputs, we can also see that i opted to set a higher probability to obtain values closer to zero.
+\section{Simulation}
+Tu run the simulation, we must run the \textbf{simulateP4.sh} file(which its only line inside is vsim -c -do run.do).
+If we take a look inside the run.do, we can see that we are first running a verbose test followed by a quiet test. If we see the console we can check that 0 errors are detected:
+
+ \begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{img/verboseOut.png}
+\label{Verbose Output}
+\caption{Output of Verbose Test}
+\end{figure}
+\vspace{0.3cm}
+
+ \begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{img/quietOut.png}
+\label{Verbose Output}
+\caption{Output of Quiet Test}
+\end{figure}
+\vspace{0.3cm}
+
+\section{Coverage}
+The effectiveness of any verification process lies not only in the thoroughness of tests but also in the extent to which different scenarios are explored. Functional coverage is a critical metric in ensuring that the design under test (DUT) is subjected to a comprehensive range of stimuli. In the Pentium 4 adder testbench, achieving this high level of functional coverage is made possible through the implementation of the \textbf{p4\_cov class.} This section highlights the purpose and functionality of the coverage class, showcasing its contribution to the verification process.
+The primary objective of the p4\_cov class is to capture a wide spectrum of input operand values and the carry input (CIN) signals that the Pentium 4 adder module is subjected to during simulation. By comprehensively evaluating these operands and signals, the coverage class ensures that various combinations and scenarios are exercised, contributing to the overall coverage goal.
+\subsection{Coverpoints and Crosses}
+Within the covergroup, two coverpoints—a\_cp and b\_cp—are defined to track the input operands A and B, respectively. These coverpoints have bins that capture specific ranges of operand values, including zeroes, upper boundaries, and various other ranges. A third coverpoint—cin\_cp—captures the values of the carry input (CIN) signal, registering both possible binary states (0 and 1).
+Additionally, a cross called crossed\_A\_B\_Cin is established to capture interactions between the coverpoints. This cross helps identify scenarios where specific operand values and CIN signals converge, enabling better understanding of coverage interactions.
+During the run phase, the covergroup is sampled in a continuous loop, triggered by the falling edge of the clock signal. This constant monitoring and sampling contribute to the accumulation of functional coverage data.
+\subsection{Results}
+Both the results of the coverage analysis of the performed tests are merged in the file \textbf{P4\_ADDER.ucdb}  and then printed through the console. A fragment of the coverage output obtained is shown in the following image:
+ \begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{img/coverageOutP4.png}
+\label{Coverage Output P4\_ADDER}
+\caption{Coverage Output P4\_ADDER}
+\end{figure}
+\vspace{0.3cm}
+The p4\_cg covergroup demonstrates substantial verification progress, achieving an overall coverage of 97.22\%. This impressive figure showcases the thoroughness of the testing process.
+
+Then three coverpoints, namely a\_cp, b\_cp, and cin\_cp, exhibit full coverage with percentages of 100\%. This indicates that all possible scenarios involving input operands A, B, and the carry input (CIN) have been explored.
+
+Cross Coverage: The cross crossed\_A\_B\_Cin has a coverage rate of 88.88\%. While it signifies substantial coverage of interaction scenarios between A, B, and CIN, two bins remain unexplored. These untested interactions represent opportunities for enhancing verification coverage.
+\subsection{Coverage Conclusion}
+To conclude, the coverage analysis output provides a comprehensive insight into the verification status of the Pentium 4 adder. It underscores areas of coverage success, such as achieving full coverage for individual coverpoints—namely A, B, and CIN (with 100\% coverage). Simultaneously, it identifies opportunities for further investigation, as observed through the relatively small number of unexplored bins within the cross coverage. 
+
+\chapter{Register File with Windowing}
+\section{Introduction \& Obstacles Encountered}
+In this second project of this step of the workshop, I embarked on a more intricate journey - the creation of a Register File Windowing testbench. This particular attempt proved to be the most challenging and time-intensive of all. As I delved into the complex working of the Register File and the associated windowing mechanisms, I found myself diving deeper into the core concepts of analysis FIFOs, TLM FIFOs, and the seamless interaction through ports like i mentioned at the beggining of the report.
+
+At points, I faced confusion and occasional frustration. The complexity of analysis FIFOs aggregating data for comprehensive analysis, and TLM FIFOs facilitating seamless data exchange between components, presented intricate hurdles. Meanwhile, shaping the predictor into a functional model proved to be an equally formidable process that consumed considerable time.
+
+Nonetheless, persisting through those intense periods bore fruitful results in terms of good insights and skills development. This phase was pivotal in grasping the point of UVM's efficacy. As I meticulously and slowly assembled the Register File Windowing testbench, I succeeded in harmonizing analysis FIFOs, TLM FIFOs, ports, agents,components,sequencers, among others, into a coherent ensemble.
+
+Indeed, my approach may have leaned towards complexity, but the sense of accomplishment it brought was much like cracking a complex puzzle. Through the challenges, this journey taught me resilience and determination.
+
+The Register File Windowing testbench I designed stands as proof of my dedication, learning important skills, and the joy of unraveling complex challenges to build a strong and, in my point of view, effective solution.
+
+
+\section{Summary of the testbench components}
+\vspace*{0.3cm}
+\textbf{rf\_if:} This file defines a UVM interface for connecting to the Register File (RF). The interface includes input and output signals for communication with the RF module.
+
+\vspace*{0.3cm}
+
+\textbf{rf\_pkg:} This package includes all the necessary components, transactions, and configurations to build and run the RF testbench. It includes enums for operation types, a global virtual interface to the P4\_if, and references to the UVM components.
+
+\vspace*{0.3cm}
+\textbf{generic\_pkg:} This package defines the local parameters of the DUT, which are, NBITS, NREGISTERS, F(Number of windows), N(Numbers of registers in each block) and M(number of global registers) that are used by almost all the modules.
+\vspace*{0.3cm}
+\textbf{rf\_data:} his file defines a UVM transaction class for the Register File (RF) data. It includes data fields for address, data, and port. The class provides functions for string conversion, deep copying, comparison, and loading data into a transaction.
+
+\vspace*{0.3cm}
+
+\textbf{rf\_req:} This file defines a UVM transaction class for the Register File (RF) request. It extends the rf\_data transaction class by adding an additional operation field. The class provides functions for string conversion, deep copying, comparison, and loading data into a transaction.
+
+\vspace*{0.3cm}
+
+\textbf{interface\_base:} If we go into the monitor and the driver, both of them need to use an interface to talk to the memory. Rather than each of them having their own build\_phase, we are going to create a common build phase by means of the interface\_base file. 
+
+\vspace*{0.3cm}
+
+\textbf{responder:} The responder generates read response transactions for the memory reads and sends them to the monitor. From there, the response transactions flow through the predictor and finally to the comparator, where they are compared with the predicted responses. This entire flow helps in verifying whether the DUT's behavior matches
+the expected behavior.
+
+\vspace*{0.3cm}
+
+\textbf{driver:} This file defines a UVM driver class for sending transactions to the memory interface (memory\_if) of the DUT. It takes transaction items from the sequence, translates them into appropriate signal-level actions, and sends these actions to the DUT through the memory interface signals. Responses from the DUT are collected, and the appropriate transaction is constructed and sent back to the sequence.
+\vspace*{0.3cm}
+
+\textbf{monitor:} This file defines a UVM monitor class for observing the signals on the memory interface (memory\_if) of the DUT. It watches for changes in these signals, such as address updates, read/write operations, and data updates. When a change occurs, the monitor constructs corresponding transactions (requests and responses) based on the observed signals. If it detects a valid read or write operation, it clones the transaction and sends it through analysis ports to be captured by downstream components like the predictor and comparator. This separation of signal-level monitoring and transaction-level analysis helps maintain the modularity and scalability 
+of the testbench architecture.
+
+\vspace*{0.3cm}
+
+\textbf{predictor:} This file defines a UVM agent class for predicting memory operations in the Register File (RF) simulation. The predictor processes incoming requests and simulates memory operations based on the request types. It maintains a simulated register file and memory model and generates responses for read requests, sending them 
+to the comparator for validation.
+\vspace*{0.3cm}
+
+\textbf{comparator:} This file defines a UVM agent class for comparing actual and  predicted memory operations in the Register File (RF) simulation. The comparator receives actual responses from the DUT and predicted responses from the predictor. It compares these responses and reports any discrepancies.
+
+\vspace*{0.3cm}
+
+\textbf{printer:} This file defines a UVM agent class for printing out transaction data  from an analysis FIFO. The printer agent receives transactions from the FIFO and reports their contents.
+
+\vspace*{0.3cm}
+
+\textbf{tester\_env:} This file defines the environment for the testbench. It includes the setup and connections of various components like the test sequence, driver, monitor, predictor, comparator, and printers.
+
+\vspace*{0.3cm}
+
+\textbf{test\_seq:} This file defines the test sequence that will be executed.
+
+\vspace*{0.3cm}
+
+\textbf{coverage:} This class defines the coverage agent for the testbench. It includes covergroups to capture different aspects of the design's behavior.
+
+\vspace*{0.3cm}
+
+\textbf{verbose\_test:} This file defines the verbose test class for the testbench.
+
+\vspace*{0.3cm}
+
+\textbf{top:} This is the top module for the RF testbench. It instantiates the RF interface and wraps it with the RF wrapper. The test is started using the run\_test() function.
+
+\vspace*{0.3cm}
+
+\textbf{run.do:} This \textbf{QuestaSim} script compiles and runs the RF testbench. It generates coverage reports and saves them in UCDB format.
+
+\section{Design Decisions}
+The architecture of the testbench involves several critical design decisions to ensure seamless communication between its components. The \textbf{driver} plays a pivotal role in transmitting requests to the Device Under Test (DUT) by toggling specific signals that define operations, addresses, and data. It adeptly orchestrates the flow of transactions by sending out requests and efficiently managing the wait for responses. On the other end, the \textbf{monitor} acts as a vigilant observer, meticulously monitoring signals related to address updates, read/write actions, and data modifications. When any change occurs, the monitor takes action, generating appropriate transactions – both requests and responses.
+
+At the heart of this orchestration, the \textbf{responder} takes on the role of generating read response transactions for read operations. These responses are then seamlessly sent to the monitor, completing the feedback loop. The magic unfolds as the monitor captures these transactions and shares them through analysis ports. This data then flows downstream, where components like the \textbf{predictor} and \textbf{comparator} come into play. The comparator carries out a critical role in this process, meticulously comparing the expected values generated by the predictor's model with the actual responses from the register file. These complex design decisions culminate in a synchronized dance of components that ensure the testbench's accuracy and effectiveness.
+
+\section{Register File Sequence \& Test}
+This section takes a deep dive into the intricate workings of the test sequence, a pivotal component in comprehensively evaluating the performance of the register file windowing system. This sequence encapsulates a series of operations that simulate real-world scenarios encountered by the register file.
+
+Before embarking on an exploration of the sequence's inner workings, it's essential to highlight three fundamental tasks that serve as the cornerstones of its functionality:
+
+\vspace{0.3cm}
+\begin{lstlisting}[language=Verilog, caption= Return/Reset/Call task, label=lst:sysverilog]
+// Task to perform a call, return, or reset request task
+   task call_return_reset(rf_op operation);
+       $display("");
+       // Create the request object for the specified operation
+       req = new();
+       req.op = operation;
+       // Start and finish the transaction
+       start_item(req);
+       finish_item(req);
+       // Get the response        
+       get_response(rsp);
+       $display("");
+   endtask
+\end{lstlisting}
+\vspace{0.3cm}
+This task has the responsibility of transmitting a request to the Device Under Test (DUT) to execute the specified operation, as indicated by the argument it receives. This task proves to be versatile, serving both as a way for calling and returning from subroutines, as well as for executing the reset operation. 
+The following task used is:
+\vspace{0.3cm}
+\begin{lstlisting}[language=Verilog, caption= Read & Write request task, label=lst:sysverilog]
+// Task to perform read and write operations in a window
+   task read_write_window(rf_op operation);
+       i = 0;  
+       repeat(14) begin // Read all positions in the window
+           req = new();
+           assert(req.randomize()); 
+           assert(req.randomize()); 
+           // Randomize the data (for simplicity, I only want to randomize the data)
+           req.op   = operation;
+           req.addr = i;
+           req.port = 0;
+           // Start and finish the transaction
+           start_item(req);
+           `uvm_info("test_seq", {"Sending transaction ", req.convert2string()}, UVM_HIGH);
+           finish_item(req);
+           // Get the response        
+           get_response(rsp);      
+           // Print the response if the operation was a read
+           if (req.op == read)
+               `uvm_info("test_seq", {"Got back: ", rsp.convert2string()}, UVM_HIGH);
+           i++;
+       end 
+       i = 0;
+       #1; // Allow the initial read to complete before printing the following uvm_info
+       $display("");
+   endtask
+\end{lstlisting}
+\vspace{0.3cm}
+
+This task serves to execute both \textbf{READ} and \textbf{WRITE} operations across all registers within the window, including the GLOBALS (a total of 5 registers). A notable aspect of this process is the utilization of the randomize() function to derive randomized 64-bit values that are written into the registers.
+Finally, the last task is in charge or performing a number of random operations, the number is passed as an argument, this is used in the last part of the sequence:
+\vspace{0.3cm}
+\begin{lstlisting}[language=Verilog, caption= Random operation request task, label=lst:sysverilog]
+// Task to perform a given number of random operations without verbosity
+   task random_operations(int number);
+       // Turn off verbosity for the test's duration
+       uvm_top.set_report_verbosity_level_hier(UVM_NONE);
+       // Perform random operations
+       repeat(number) begin
+           req = new();
+           // Randomize the request
+           assert(req.randomize() with {
+               addr <= 'hd; // Max value for the address
+               // Distribution for the 'op' field
+               op dist {
+                   read  := 45,
+                   write := 45,
+                   [call:ret]  :/ 5,
+                   reset := 1
+               };
+           });
+           // Start and finish the transaction
+           start_item(req);
+           `uvm_info("test_seq", {"Sending transaction ", req.convert2string()}, UVM_HIGH);
+           finish_item(req);
+           // Get the response        
+           get_response(rsp);      
+           // Print the response if the operation was a read
+           if (req.op == read)
+               `uvm_info("test_seq", {"Got back: ", rsp.convert2string()}, UVM_HIGH);
+       end
+       // Restore verbosity level
+       uvm_top.set_report_verbosity_level_hier(UVM_MEDIUM);
+   endtask
+\end{lstlisting}
+\vspace{0.7cm}
+Now, let's dive into the initial steps of the test. We begin by initiating a "\textbf{RESET}" to provide the system with a clean slate. Following this, we proceed with a sequence where various registers receive a series of random values. Subsequently, we move through a sequence of subroutine calls and register writes, ensuring a comprehensive assessment of the system's functionality. It's like a methodical check to confirm that all the essential actions are in harmony.
+\vspace{0.3cm}
+\begin{lstlisting}[language=Verilog, caption= First Sequence, label=lst:sysverilog]
+       // Print information about initializing the registers in all windows
+       `uvm_info("run", "We are about to initialize the registers in all the windows", UVM_MEDIUM);  
+
+       read_write_window(write);            // Write all registers in Main window
+       call_return_reset(call);             //FIRST SUBROUTINE CALL
+       read_write_window(write);            // Write all registers in SUB1
+       call_return_reset(call);             //SECOND SUBROUTINE CALL
+       read_write_window(write);            // Write all registers in SUB2         
+       call_return_reset(call);             //THIRD SUBROUTINE CALL 
+       read_write_window(write);            // Write all registers in SUB3
+       read_write_window(read);             //Read all registers in SUB3
+       call_return_reset(ret);              //RETURN TO SUB2
+       read_write_window(read);             //Read all registers in SUB2
+       call_return_reset(ret);              //RETURN TO SUB1
+       read_write_window(read);             //Read all registers in SUB1
+       call_return_reset(ret);              //RETURN TO MAIN PROGRAM
+       read_write_window(read);             //Read all registers in MAIN PROGRAM
+        `uvm_info("run", "Now we are going to call our first subroutine and read all the registers in the window", UVM_MEDIUM);
+       call_return_reset(call);
+       read_write_window(read); 
+       `uvm_info("run", "Returning from the subroutine, SIGRETURN is set", UVM_MEDIUM);
+       call_return_reset(ret);
+       `uvm_info("run", "Now we are going to read all the registers in the current window", UVM_MEDIUM); 
+       read_write_window(read);
+\end{lstlisting}
+\vspace{0.7cm}
+Reaching the end of our sequence file, we have a very important sequence, dedicated to test the \textbf{SPILL} \& \textbf{FILL} operations. Once we call the 4th subroutine, because of the fact of not having any free windows, a SPILL will be performed of the window0 (main program) into the memory to make it free for the new subroutine to perform read and write on its registers. The subsequent phase involves the step-by-step return from the subroutines. Once we reach Subroutine 1 and we make a return, a FILL operation comes into play, retrieving the preserved register values from memory and seamlessly reinstating them to their state prior to the invocation of the 4th subroutine.
+\vspace{0.3cm}
+\begin{lstlisting}[language=Verilog, caption= SPILL and FILL test sequence, label=lst:sysverilog]
+`uvm_info("run", "Now the moment of truth, we are going to spill", UVM_HIGH);
+       $display("");
+       `uvm_info("run", "Subroutine 1", UVM_MEDIUM);
+       call_return_reset(call);
+       `uvm_info("run", "Subroutine 2", UVM_MEDIUM);
+       call_return_reset(call);
+       `uvm_info("run", "Subroutine 3", UVM_MEDIUM);
+       call_return_reset(call);
+       // Print information about Subroutine 4 (SPILL):
+       `uvm_info("run", "Subroutine 4", UVM_MEDIUM); // SPILL
+       call_return_reset(call);
+       read_write_window(write);
+       read_write_window(read);
+       call_return_reset(ret); // Return to Sub3
+       read_write_window(read); 
+       call_return_reset(ret); // Return to Sub2
+       read_write_window(read);
+       call_return_reset(ret); // Return to Sub1
+       read_write_window(read);
+       // Call a subroutine for return operation (Return to main, a FILL will be performed)
+       call_return_reset(ret);
+       `uvm_info("run", "Returning to main program", UVM_MEDIUM)
+     
+       // Perform some NOP operations to give time for filling
+       repeat(10) begin
+           req = new();
+           req.op = nop;
+           start_item(req);
+           finish_item(req);
+           get_response(rsp);
+       end
+       // Read FILLED registers from memory
+       read_write_window(read)
+\end{lstlisting}
+\vspace{0.3cm}
+To conclude, we perform 10000 random operations with the use of another task \textbf{random\_operations (int number)}, this way we can test in a more extensive way the correct behavior of the DUT and check for errors. An interesting strategy I employed was to manage verbosity effectively. With the potential of generating a significant 10,000 transactions, I devised an intelligent solution. By tuning the verbosity level to \textbf{"UVM\_NONE,"} I adeptly avoided inundating outputs. 
+\vspace{0.3cm}
+\begin{lstlisting}[language=Verilog, caption= Final 10000 random operations to expand Coverage (No verbosity), label=lst:sysverilog]
+       // Print information about performing random operations without verbosity
+       `uvm_info("run", "NOW I WANT TO PERFORM 10000 RANDOM OPERATIONS WITHOUT VERBOSITY::::::::::", UVM_MEDIUM);
+       $display("");
+       // Perform random operations without verbosity
+       call_return_reset(reset);
+       random_operations(10000);
+
+\end{lstlisting}
+\vspace{0.3cm}
+
+
+
+\section{Results}
+After simulation the previously commented sequence, i found a bug in the DUT:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{img/error_reset.png}
+\label{error reset}
+\caption{Error due to a reset malfunction}
+\end{figure}
+\vspace{0.3cm}
+We can see that in \textbf{UVM\_INFO @ 9281} the signal reset is set, but then, when the first subroutine is called, a spill is performed and we get an error at \@9561. We have found a fault in the DUT.
+If we go to the source file of the register file, in the part belonging to the reset, we find this:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\linewidth]{img/resetissue1.png}
+\label{error resets}
+\caption{Reset VHDL description}
+\end{figure}
+\vspace{0.3cm}
+
+As we may see, we are missing something here, we are not resetting the values of the Current and Save Window Pointer (CWP and SWP), together with variables used during the simulation like "i","j","CANSAVE","CANRESTORE".
+After changing the source code, we finally get:
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\linewidth]{img/resetCorrection.png}
+\label{reset correction}
+\caption{NEW Reset VHDL description}
+\end{figure}
+\vspace{0.3cm}
+Now, if we run again the simulation the error is gone and there are no \$UVM\_ERRORS:
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{img/errorGone.png}
+\label{error resets}
+\caption{New Test output}
+\end{figure}
+\vspace{0.3cm}
+
+\section{Coverage}
+The coverage class is designed to comprehensively capture key behaviors of the register file module within the testbench. In the context of this coverage analysis, a notable challenge arose repect to the coverage of operation transitions, particularly involving consecutive call, ret, and reset operations. This challenge was due to to the insertions of NOP operations due to delays in the test sequence between for example, two consecutive CALL operations. This NOP operation was not permiting that the transitions CALL --> CALL, CALL --> RET, RET --> RESET, among others, were covered. 
+
+To address this issue, a clever solution was implemented. The coverage agent now avoids sampling coverage data when a NOP operation is encountered. By excluding nop operations from coverage sampling, the impact of delayed nop insertions on operation transitions was mitigated. As a result, accurate and consistent operation transition coverage is now achieved, providing a more faithful representation of the register file's behavior during simulation.
+
+\subsection{Results}
+Analyzing the coverage output provided, the simulation reports a comprehensive coverage report consisting of three distinctive covergroups, each considering different aspects of the design's behavior.
+
+The first covergroup, named \textbf{operation\_transition\_cg}, meticulously captures singular operation transitions, exemplified by shifts from call --> reset, call --> read, read --> write, and all other possible transitions (this was the one of the issue mentioned before). The coverage of these transitions stands at an impressive 100\%, indicating a comprehensive exploration of these operation dynamics.
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{img/coverageDoubleTran.png}
+\label{Covergroup Operation Transition}
+\caption{Covergroup Operation Transition}
+\end{figure}
+\vspace{0.3cm}
+Moving forward, the second covergroup, denoted as \textbf{triple\_transition\_cg}, takes on a more complex role, going into triple transitions. This covergroup exhibits a high coverage rate of 99.20\%, leaving only one triple transition uncovered reset → reset → reset. The exploration of these triple transitions, comprising not the most commonly seen sequences such as ret --> call --> reset and ret --> reset --> write, contributes to a comprehensive understanding of the system behavior. For a matter of space, the picture is not displayed in this case.
+
+Lastly, the \textbf{comprehensive\_rf\_coverage} covergroup achieves full coverage of 100\%, covering all the possible values the address, port and operation can take, and covering the two bins of the possible data values.
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{img/ComprehensiveCov.png}
+\label{Covergroup comprehensive\_rf\_coverage}
+\caption{Covergroup comprehensive\_rf\_coverage}
+\end{figure}
+
+
+
+\chapter{Conclusion}
+
+In conclusion, this report has provided a comprehensive overview of verification methodologies, with a focus on UVM testbenches for the \textbf{Pentium 4 adder} and the \textbf{Register File} with a Windowing system. While my implementations may not be flawless, they have greatly contributed to my understanding of UVM components like agents, tlm\_fifos, analysis fifos, ports, among others.
+
+These hands-on experiences have been valuable learning opportunities, allowing me to delve deep into UVM's complexities. While not perfect, they signify significant progress in making use of UVM's capabilities for hardware verification.
+
+Ultimately, this step of the Workshop highlights, for me, the journey of learning and growth, rather than just the final results. They mark a significant step forward and set the stage for continuous refinement and exploration within the empire of UVM-powered verification.
+\end{document}
+
